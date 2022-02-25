@@ -1,0 +1,4 @@
+{
+   "sass": "sass --watch ./P3/sass/styles.scss:./P3/public/css/styles.css",
+  "git.ignoreLimitWarning": true
+}

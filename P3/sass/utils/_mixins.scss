@@ -1,0 +1,55 @@
+@mixin footer {
+  footer {
+    background-color: #353535;
+  }
+
+  .contenu-footer {
+    color: white;
+    .logo-ohmyfood {
+      margin-left: 20px;
+      font-family: $fontFamilyTitres;
+    }
+  }
+
+  .nav-footer {
+    display: flex;
+  }
+
+  .liste-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+@mixin boutonCommander {
+  input {
+    background-color: linear-gradient(lighten($colorButton, 1%), $primary);
+    font-family: $font-size-h3;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 40px;
+  }
+}
+
+@mixin card {
+  .card-entrees, .card-plats, .card-desserts{
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
+}
+  
+}

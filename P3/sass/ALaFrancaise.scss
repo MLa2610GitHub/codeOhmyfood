@@ -1,0 +1,40 @@
+@import "./base/normalize";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./font-awesome/fontawesome.scss";
+
+body {
+  font-family: $fontFamily;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  #page-accueil-container {
+    max-width: 667px;
+    margin: 0 auto;
+    display: flex;
+    
+  }
+}
+
+header {
+  width: 100%;
+  
+
+  .logo-ohmyfood {
+    text-align: center;
+    font-family: $fontFamilyTitres;
+  }
+}
+
+  .photo-card-restaurant{
+    display: flex;
+  }
+
+  .photo-card-restaurant img{
+    height: 200px;
+    width: 100%;
+  object-fit: cover;
+  }
+
+@include boutonCommander;
+@include footer;
