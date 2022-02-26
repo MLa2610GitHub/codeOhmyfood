@@ -7610,12 +7610,15 @@ header .logo-ohmyfood {
 }
 
 .form-button-choix-restaurants input {
-  background: linear-gradient(rgba(240, 0, 0, 0.5960784314), #9356DC);
+  background: linear-gradient(rgba(240, 0, 0, 0.5960784314), #9356dc);
   color: white;
   padding: 10px;
   border-radius: 20px;
   border: none;
   margin-bottom: 40px;
+}
+.form-button-choix-restaurants input:hover {
+  cursor: pointer;
 }
 
 .fa-ul a {
@@ -7664,16 +7667,26 @@ h2 {
   display: flex;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 footer {
   background-color: #353535;
 }
 
 .contenu-footer {
   color: white;
+  padding-top: 10px;
+  margin-bottom: 2px;
 }
 .contenu-footer .logo-ohmyfood {
-  margin-left: 20px;
+  padding-left: 20px;
   font-family: Shrikhand;
+}
+.contenu-footer .logo-ohmyfood .logo-ohmyfood h3 {
+  margin-bottom: 0;
 }
 
 .nav-footer {
@@ -7684,14 +7697,25 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 20px;
+  margin-top: 0;
 }
 
 ul {
   list-style-type: none;
 }
 
+li.fas.fa-utensils::before {
+  padding-right: 10px;
+}
+
+li.fas.fa-handshake::before {
+  padding-right: 4px;
+}
+
 li a {
   color: white;
   cursor: pointer;
   text-decoration: none;
+  line-height: 1.5;
 }/*# sourceMappingURL=styles.css.map */

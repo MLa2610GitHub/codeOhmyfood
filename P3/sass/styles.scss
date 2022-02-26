@@ -54,7 +54,10 @@ header {
   border-radius: 20px;
   border: none;
   margin-bottom: 40px;
+
+ &:hover {cursor: pointer;}
 }
+
 
 .fa-ul a {
   text-decoration: none;
@@ -101,36 +104,7 @@ h2 {
   display: flex;
 }
 
-footer {
-  background-color: #353535;
-}
-
-.contenu-footer {
-  color: white;
-  .logo-ohmyfood {
-    margin-left: 20px;
-    font-family: $fontFamilyTitres;
-  }
-}
-
-.nav-footer {
-  display: flex;
-}
-
-.liste-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li a {
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-}
+@include liens;
+@include footer;
 
 

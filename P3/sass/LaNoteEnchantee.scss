@@ -18,11 +18,20 @@ body {
 
 header {
   width: 100%;
-  
+  margin-top: 15px;
 
-  .logo-ohmyfood {
-    text-align: center;
-    font-family: $fontFamilyTitres;
+  .top-header {
+    display: flex;
+
+          .fa-arrow-left {
+        padding: 15px;
+
+        .logo-ohmyfood {
+          text-align: center;
+          font-family: $fontFamilyTitres;
+        
+      }
+    }
   }
 }
 
@@ -36,5 +45,12 @@ header {
   object-fit: cover;
   }
 
+  main{
+  background-color: $backgroundGris
+}
+
+@include cardEntrees;
+@include cardPlats;
+@include cardDesserts;
 @include boutonCommander;
 @include footer;

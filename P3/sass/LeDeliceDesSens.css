@@ -7613,13 +7613,6 @@ main {
   display: flex;
 }
 
-.card-entrees, .card-plats, .card-desserts {
-  background-color: white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px;
-}
-
 .card-texte-prix {
   display: flex;
 }
@@ -7630,21 +7623,43 @@ main {
   align-items: center;
 }
 
-.card-entrees, .card-plats, .card-desserts {
+.card-entrees {
   background-color: white;
   border-radius: 10px;
   margin: 15px;
   padding: 5px;
 }
 
-input {
-  background-color: linear-gradient(rgba(240, 0, 0, 0.5960784314), #9356DC);
-  font-family: 1rem;
+.card-plats {
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.card-desserts {
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.button-commander {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-commander input {
+  background: linear-gradient(rgba(240, 0, 0, 0.5960784314), #9356dc);
   color: white;
-  padding: 10px;
+  width: 200px;
+  padding: 15px;
   border-radius: 20px;
   border: none;
-  margin-bottom: 40px;
+  margin: 20px 40px;
+  font-weight: 800;
 }
 
 footer {
@@ -7653,10 +7668,15 @@ footer {
 
 .contenu-footer {
   color: white;
+  padding-top: 10px;
+  margin-bottom: 2px;
 }
 .contenu-footer .logo-ohmyfood {
-  margin-left: 20px;
+  padding-left: 20px;
   font-family: Shrikhand;
+}
+.contenu-footer .logo-ohmyfood .logo-ohmyfood h3 {
+  margin-bottom: 0;
 }
 
 .nav-footer {
@@ -7667,14 +7687,25 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 20px;
+  margin-top: 0;
 }
 
 ul {
   list-style-type: none;
 }
 
+li.fas.fa-utensils::before {
+  padding-right: 10px;
+}
+
+li.fas.fa-handshake::before {
+  padding-right: 4px;
+}
+
 li a {
   color: white;
   cursor: pointer;
   text-decoration: none;
+  line-height: 1.5;
 }/*# sourceMappingURL=LeDeliceDesSens.css.map */

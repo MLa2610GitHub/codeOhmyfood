@@ -53,12 +53,7 @@ header {
   display: flex
 }
 
-.card-entrees, .card-plats, .card-desserts{
-  background-color: white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px;
-}
+
 
 .card-texte-prix{
   display: flex;
@@ -71,6 +66,9 @@ header {
 }
 
 
-@include card;
+
+@include cardEntrees;
+@include cardPlats;
+@include cardDesserts;
 @include boutonCommander;
 @include footer;
