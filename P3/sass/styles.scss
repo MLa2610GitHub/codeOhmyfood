@@ -58,11 +58,43 @@ header {
  &:hover {cursor: pointer;}
 }
 
+ul.fa-ul{
+   margin-left: 5px;
+}
+
+.page-accueil-bloc-fonctionnement ul li{
+  background-color: $backgroundGris;
+  padding: 15px 15px 15px 0;
+  border-radius: 25px;
+  border: none;
+  width: 90%;
+  margin-bottom: 20px;
+ 
+}
+
+ul span{
+  font-size: 1.2em;
+}
 
 .fa-ul a {
   text-decoration: none;
   color: black;
   cursor: pointer;
+}
+
+i.fas.fa-circle.fa-stack-1x{
+font-size: 1.5em;
+color: rgb(147,86,220);
+padding-left: 0;
+
+}
+
+i.fas.fa-mobile-screen-button::before, i.fas.fa-list-ul::before, i.fas.fa-store::before {
+  color: rgb(147,86,220);
+  font-size: 1.2em;
+  margin-left: 10px;
+  margin-right: 10px;
+  
 }
 
 h1 {
@@ -101,8 +133,12 @@ h2 {
 }
 
 .nom-restaurant-et-coeur {
-  display: flex;
+  display: flex;  
+  justify-content: space-between;
+  align-items: baseline;
 }
+
+
 
 @include liens;
 @include footer;

@@ -7623,6 +7623,12 @@ main {
   align-items: center;
 }
 
+.nom-restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .card-entrees {
   background-color: white;
   border-radius: 10px;

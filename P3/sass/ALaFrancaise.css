@@ -7609,6 +7609,20 @@ main {
   background-color: #F6F6F6;
 }
 
+.fa-stack {
+  font-size: 0.5em;
+}
+
+i {
+  vertical-align: middle;
+}
+
+.nom-restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .card-entrees {
   background-color: white;
   border-radius: 10px;

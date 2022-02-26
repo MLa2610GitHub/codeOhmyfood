@@ -49,6 +49,16 @@ header {
   background-color: $backgroundGris
 }
 
+
+.fa-stack{
+  font-size: 0.5em;
+  }
+
+  i{
+    vertical-align: middle
+  }
+
+@include nomRestaurant;
 @include cardEntrees;
 @include cardPlats;
 @include cardDesserts;

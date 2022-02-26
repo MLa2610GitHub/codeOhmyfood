@@ -49,6 +49,7 @@ header {
   background-color: $backgroundGris
 }
 
+@include nomRestaurant;
 @include cardEntrees;
 @include cardPlats;
 @include cardDesserts;
