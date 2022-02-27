@@ -7636,6 +7636,18 @@ main {
   padding: 5px;
 }
 
+.card-texte-prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.prix {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .button-commander {
   display: flex;
   flex-direction: row;
@@ -7652,6 +7664,10 @@ main {
   border: none;
   margin: 20px 40px;
   font-weight: 800;
+}
+
+.button-commander input:hover {
+  opacity: 0.6;
 }
 
 footer {
