@@ -50,6 +50,7 @@ header {
 }
 
 @include nomRestaurant;
+@include titreH2Menu;
 @include cardEntrees;
 @include cardPlats;
 @include cardDesserts;

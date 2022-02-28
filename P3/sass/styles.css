@@ -7580,6 +7580,11 @@ body #page-accueil-container {
   flex-direction: column;
 }
 
+.spinner-accueil {
+  display: flex;
+  justify-content: center;
+}
+
 header {
   width: 100%;
   text-align: center;
@@ -7637,6 +7642,7 @@ ul.fa-ul {
   border: none;
   width: 90%;
   margin-bottom: 20px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
 }
 
 ul span {
@@ -7739,6 +7745,7 @@ h2 {
 
 .data-card-bloc-restaurant {
   padding: 0 20px 0 5px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
 }
 
 .data-card-bloc-restaurant h3 {
@@ -7762,6 +7769,18 @@ i.fa.fa-heart-o.fa-lg::before {
 i.fa.fa-heart-o.fa-lg:hover {
   color: #eb000098;
   font-weight: bold;
+}
+
+@-webkit-keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 a {

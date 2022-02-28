@@ -13,8 +13,14 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    }
   }
-}
+
+  .spinner-accueil{ 
+    display: flex;
+    justify-content: center;
+  }
+ 
 
 
 header {
@@ -81,6 +87,7 @@ ul.fa-ul {
   border: none;
   width: 90%;
   margin-bottom: 20px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
 }
 
 ul span {
@@ -182,6 +189,7 @@ h2 {
 
 .data-card-bloc-restaurant {
   padding: 0 20px 0 5px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
 }
 
 .data-card-bloc-restaurant h3 {
@@ -208,5 +216,6 @@ i.fa.fa-heart-o.fa-lg:hover{
   
 }
 
+@include spinnerAccueil;
 @include liens;
 @include footer;

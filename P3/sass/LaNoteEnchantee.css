@@ -7613,39 +7613,67 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-left: 20px;
+}
+
+.titre-h2 {
+  margin-left: 25px;
 }
 
 .card-entrees {
   background-color: white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 1px 20px 0 20px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
+}
+
+.titre-h3 h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card-plats {
   background-color: white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 1px 20px 0 10px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
 }
 
 .card-desserts {
   background-color: white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 1px 20px 0 10px;
+  box-shadow: 5px 5px 5px 0 #e2e2e2;
 }
 
 .card-texte-prix {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  width: 100%;
+}
+
+.texte {
+  width: 100%;
+}
+
+.texte p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  width: 92%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .prix {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-weight: bold;
 }
 
 .button-commander {
