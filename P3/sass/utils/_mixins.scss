@@ -1,3 +1,14 @@
+@mixin nomRestaurant() {
+  .nom-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-left: 20px;
+  }
+}
+
+
+
 @mixin footer {
   footer {
     background-color: #353535;
@@ -5,9 +16,16 @@
 
   .contenu-footer {
     color: white;
+    padding-top: 10px;
+    margin-bottom: 2px;
+
     .logo-ohmyfood {
-      margin-left: 20px;
-      font-family: $fontFamilyTitres;
+      padding-left: 20px;
+      font-family: $fontFamilyLogo;
+
+      .logo-ohmyfood h3 {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -19,37 +37,135 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 20px;
+    margin-top: 0;
   }
 
   ul {
     list-style-type: none;
   }
 
+  li.fas.fa-utensils::before {
+    padding-right: 10px;
+  }
+
+  li.fas.fa-handshake::before {
+    padding-right: 4px;
+  }
+
   li a {
     color: white;
     cursor: pointer;
     text-decoration: none;
+    line-height: 1.5;
   }
 }
 
-@mixin boutonCommander {
-  input {
-    background-color: linear-gradient(lighten($colorButton, 1%), $primary);
-    font-family: $font-size-h3;
+@mixin boutonCommander() {
+  .button-commander {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-commander input {
+    background: linear-gradient(lighten($colorButton, 1%), $primary);
     color: white;
-    padding: 10px;
+    width: 200px;
+    padding: 15px;
     border-radius: 20px;
     border: none;
-    margin-bottom: 40px;
+    margin: 20px 40px;
+    font-weight: 800;
+  }
+
+  .button-commander input:hover {
+    opacity: 0.6;
   }
 }
 
-@mixin card {
-  .card-entrees, .card-plats, .card-desserts{
-  background-color: white;
-  border-radius: 10px;
-  margin: 15px;
-  padding: 5px;
+@mixin titreH2Menu() {
+  .titre-h2 {
+    margin-left: 25px;
+  }
 }
-  
+
+@mixin cardEntrees() {
+  .card-entrees {
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 1px 20px 0 20px;
+    box-shadow: 5px 5px 5px 0 #e2e2e2;
+   
+  }
+
+  .titre-h3 h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@mixin cardPlats() {
+  .card-plats {
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 1px 20px 0 10px;
+    box-shadow: 5px 5px 5px 0 #e2e2e2;
+  }
+}
+
+@mixin cardDesserts() {
+  .card-desserts {
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 1px 20px 0 10px;
+    box-shadow: 5px 5px 5px 0 #e2e2e2;
+  }
+}
+
+@mixin cardTextePrix {
+  .card-texte-prix {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; 
+    width: 100%;
+    
+  }
+
+  .texte {
+     width: 100%; 
+
+  }
+
+  .texte p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 92%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    
+    
+   
+  }
+
+  .prix {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    
+  }
+}
+
+@mixin liens() {
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
 }

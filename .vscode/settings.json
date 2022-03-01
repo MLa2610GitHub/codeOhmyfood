@@ -1,4 +1,32 @@
+
 {
-   "sass": "sass --watch ./P3/sass/styles.scss:./P3/public/css/styles.css",
-  "git.ignoreLimitWarning": true
+    "folders": [
+        {
+            "path": "./P3/sass"
+        }
+    ],
+    "settings": {
+        "liveSassCompile.settings.formats":[
+            {
+                "format": "expanded",
+                "extensionName": ".css",
+                "savePath": "./P3/css"
+            },
+            {
+                "format": "compressed",
+                "extensionName": ".min.css",
+                "savePath": "./P3/css/"
+            },
+           
+        ],
+        "liveSassCompile.settings.generateMap": true,
+        "liveSassCompile.settings.autoprefix": [
+            "> 1%",
+            "last 2 versions"
+        ]
+    }
 }
+
+
+
+

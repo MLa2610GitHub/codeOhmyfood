@@ -7592,6 +7592,7 @@ header .top-header .fa-arrow-left {
 header .top-header .fa-arrow-left .logo-ohmyfood {
   text-align: center;
   font-family: Shrikhand;
+  font-weight: normal;
 }
 
 .photo-card-restaurant {

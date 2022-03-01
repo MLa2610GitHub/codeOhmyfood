@@ -7586,7 +7586,7 @@ header {
 }
 header .logo-ohmyfood {
   font-family: Shrikhand;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .page-accueil-bloc-header {
@@ -7598,7 +7598,6 @@ header .logo-ohmyfood {
   display: flex;
   justify-content: center;
   background-color: #EAEAEA;
-  border-top-color: #3D413F;
 }
 
 .form-localisation {
@@ -7672,6 +7671,7 @@ ul span {
 }
 
 ul.fa-ul li:hover {
+  background-color: #ffc6ef;
   opacity: 0.5;
 }
 
@@ -7690,10 +7690,15 @@ i.fas.fa-circle.fa-stack-1x {
 i.fas.fa-mobile-screen-button::before,
 i.fas.fa-list-ul::before,
 i.fas.fa-store::before {
-  color: #9356dc;
   font-size: 1.2em;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+i.fas.fa-mobile-screen-button:hover,
+i.fas.fa-list-ul:hover,
+i.fas.fa-store:hover {
+  color: #9356dc;
 }
 
 h1 {
@@ -7784,13 +7789,14 @@ h2 {
   align-items: baseline;
 }
 
-i.fa.fa-heart-o.fa-lg::before {
+.coeur i {
   color: #9356dc;
 }
 
-i.fa.fa-heart-o.fa-lg:hover {
+.coeur i:hover {
   color: #eb000098;
   font-weight: bold;
+  background-clip: content-box;
 }
 
 a {

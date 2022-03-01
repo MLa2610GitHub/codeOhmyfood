@@ -5,6 +5,7 @@
 
 body {
   font-family: $fontFamily;
+
   box-sizing: border-box;
   min-height: 100vh;
 
@@ -13,22 +14,16 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    }
   }
-
-  
-
+}
 
 header {
   width: 100%;
-   text-align: center;
-  
+  text-align: center;
 
   .logo-ohmyfood {
-
-  font-family: $fontFamilyLogo;
-   font-size: 26px;
-  
+    font-family: $fontFamilyLogo;
+    font-size: 30px;
   }
 }
 
@@ -38,27 +33,26 @@ header {
   background-color: $backgroundGris;
   .page-accueil-onglet-localisation {
     display: flex;
-    justify-content: center;   
+    justify-content: center;
     background-color: $backgroundGrisFonce;
-    border-top-color:$backgroundFooter;
-    }
-    }
-    
-    .form-localisation{
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      }
-   
-    .form-localisation input {
-      padding: 10px 0;
-      border: none;
-      background-color: $backgroundGrisFonce;
-      text-align: left;
-      font-weight: bold;
-      }
-        
-      input::placeholder {
+  }
+}
+
+.form-localisation {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.form-localisation input {
+  padding: 10px 0;
+  border: none;
+  background-color: $backgroundGrisFonce;
+  text-align: left;
+  font-weight: bold;
+}
+
+input::placeholder {
   color: black;
   font-weight: 700;
 }
@@ -66,9 +60,6 @@ header {
 i.fas.fa-map-marker-alt::before {
   margin-right: 20px;
 }
-
-      
-
 
 .page-accueil-header-texte {
   background-color: $backgroundGris;
@@ -83,7 +74,6 @@ i.fas.fa-map-marker-alt::before {
   border-radius: 20px;
   border: none;
   margin-bottom: 40px;
- 
 }
 
 .form-button-choix-restaurants input:hover {
@@ -109,6 +99,7 @@ ul span {
 }
 
 ul.fa-ul li:hover {
+  background-color: (lighten($secondary, 15%));
   opacity: 0.5;
 }
 
@@ -127,10 +118,14 @@ i.fas.fa-circle.fa-stack-1x {
 i.fas.fa-mobile-screen-button::before,
 i.fas.fa-list-ul::before,
 i.fas.fa-store::before {
-  color: rgb(147, 86, 220);
   font-size: 1.2em;
   margin-left: 10px;
   margin-right: 10px;
+}
+i.fas.fa-mobile-screen-button:hover,
+i.fas.fa-list-ul:hover,
+i.fas.fa-store:hover {
+  color: $primary;
 }
 
 h1 {
@@ -220,16 +215,15 @@ h2 {
   align-items: baseline;
 }
 
-i.fa.fa-heart-o.fa-lg::before{
- color: $primary;  
+.coeur i {
+  color: $primary;
 }
 
-i.fa.fa-heart-o.fa-lg:hover{
+.coeur i:hover {
   color: $colorButton;
   font-weight: bold;
-  
+  background-clip: content-box;
 }
-
 
 @include liens;
 @include footer;
