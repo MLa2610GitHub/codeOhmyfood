@@ -53,7 +53,7 @@ header {
 }
 
 input::placeholder {
-  color: black;
+   color: black;  
   font-weight: 700;
 }
 
@@ -68,7 +68,7 @@ i.fas.fa-map-marker-alt::before {
 }
 
 .form-button-choix-restaurants input {
-  background: linear-gradient(lighten($colorButton, 1%), $primary);
+ background: linear-gradient(lighten($colorCrimson, 1%), $colorMauve);
   color: white;
   padding: 15px;
   border-radius: 20px;
@@ -220,7 +220,7 @@ h2 {
 }
 
 .coeur i:hover {
-  color: $colorButton;
+  color: $colorIndianRed;
   font-weight: bold;
   background-clip: content-box;
 }

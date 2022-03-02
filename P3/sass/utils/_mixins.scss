@@ -88,6 +88,9 @@
 @mixin titreH2Menu() {
   .titre-h2 {
     margin-left: 25px;
+    border-bottom: 7px solid $tertiary;
+    width: 40px;
+   border-radius: 5px;
   }
 }
 
@@ -132,13 +135,11 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline; 
-    width: 100%;
-    
+    width: 100%;    
   }
 
   .texte {
      width: 100%; 
-
   }
 
   .texte p {
@@ -148,9 +149,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
-    
-    
-   
   }
 
   .prix {
@@ -158,9 +156,10 @@
     justify-content: flex-end;
     align-items: center;
     font-weight: bold;
-    
   }
 }
+
+
 
 @mixin liens() {
   a {
@@ -169,3 +168,5 @@
     color: black;
   }
 }
+
+

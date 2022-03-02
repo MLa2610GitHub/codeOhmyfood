@@ -7640,7 +7640,7 @@ i.fas.fa-map-marker-alt::before {
 }
 
 .form-button-choix-restaurants input {
-  background: linear-gradient(rgba(240, 0, 0, 0.5960784314), #9356dc);
+  background: linear-gradient(#e1143d, purple);
   color: white;
   padding: 15px;
   border-radius: 20px;
@@ -7794,7 +7794,7 @@ h2 {
 }
 
 .coeur i:hover {
-  color: #eb000098;
+  color: indianred;
   font-weight: bold;
   background-clip: content-box;
 }
