@@ -27,8 +27,11 @@ header {
         padding: 15px;
 
         .logo-ohmyfood {
+          
           text-align: center;
           font-family: $fontFamilyLogo;
+          font-weight: normal;
+         
         
       }
     }
@@ -42,7 +45,7 @@ header {
   .photo-card-restaurant img{
     height: 200px;
     width: 100%;
-  object-fit: cover;
+    object-fit: cover;
   }
 
   main{
@@ -50,12 +53,24 @@ header {
 }
 
 
+
+.toggle{
+  display: flex;
+  
+}
+
+
 .fa-stack{
-  font-size: 0.5em;
+  font-size: 0.3em;
   }
 
   i{
     vertical-align: middle
+  }
+
+  .clic-choix{
+    transform: rotate(60deg);
+    transition: transform 1s ease-out,
   }
 
 @include nomRestaurant;
@@ -64,5 +79,7 @@ header {
 @include cardPlats;
 @include cardDesserts;
 @include cardTextePrix;
+@include slideDown;
 @include boutonCommander;
 @include footer;
+@include liens;

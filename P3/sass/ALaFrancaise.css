@@ -7697,6 +7697,34 @@ i {
   font-weight: bold;
 }
 
+.card-entrees, .card-plats, .card-desserts {
+  transition: 6s;
+  -webkit-animation: slideDown 4s;
+          animation: slideDown 4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes slideDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY-(-200);
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY-(-200);
+    opacity: 1;
+  }
+}
+
 .button-commander {
   display: flex;
   flex-direction: row;
