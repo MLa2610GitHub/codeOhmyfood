@@ -7659,6 +7659,7 @@ header .logo-ohmyfood {
   display: flex;
   justify-content: center;
   background-color: #EAEAEA;
+  border-top: 10px solid #EAEAEA;
 }
 
 .form-localisation {
@@ -7713,18 +7714,18 @@ i.fas.fa-map-marker-alt::before {
   opacity: 0.6;
 }
 
-ul.fa-ul {
-  margin-left: 5px;
-}
-
 .page-accueil-bloc-fonctionnement ul li {
   background-color: #F6F6F6;
-  padding: 15px 15px 15px 0;
+  padding: 25px 15px 20px 0;
   border-radius: 25px;
   border: none;
   width: 90%;
   margin-bottom: 20px;
   box-shadow: 5px 5px 5px 0 #e2e2e2;
+}
+
+ul.fa-ul {
+  margin-left: 20px;
 }
 
 ul span {
@@ -7742,18 +7743,26 @@ ul.fa-ul li:hover {
   cursor: pointer;
 }
 
+span.fa-stack {
+  position: absolute;
+  top: 37px;
+  left: 3px;
+  transform: translate(-50%, -50%);
+}
+
 i.fas.fa-circle.fa-stack-1x {
   font-size: 1.5em;
   color: #9356dc;
   padding-left: 0;
+  vertical-align: middle;
 }
 
 i.fas.fa-mobile-screen-button::before,
 i.fas.fa-list-ul::before,
 i.fas.fa-store::before {
   font-size: 1.2em;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 38px;
+  margin-right: 26px;
 }
 
 i.fas.fa-mobile-screen-button:hover,
