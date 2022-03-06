@@ -7738,7 +7738,7 @@ i {
 }
 
 .button-commander input {
-  background: linear-gradient(#d10034, #9356dc);
+  background: linear-gradient(#ff7edb, #9356dc);
   color: white;
   width: 200px;
   padding: 15px;
@@ -7806,6 +7806,10 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: black;
+  font-size: 1rem;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=ALaFrancaise.css.map */

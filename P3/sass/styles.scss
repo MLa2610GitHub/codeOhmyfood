@@ -26,7 +26,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   transition: color 2s;
-  animation: loadinger 0.1s;
+  animation: loadingSpinner 0.1s;
   animation-delay: 2s;
   animation-fill-mode: both; 
 }
@@ -55,7 +55,7 @@ body {
 }
 
 
-@keyframes loadinger
+@keyframes loadingSpinner
 {
     100%
     {
@@ -71,6 +71,12 @@ header {
   .logo-ohmyfood {
     font-family: $fontFamilyLogo;
     font-size: 30px;
+
+    h3.logo-ohmyfood{      
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    }
   }
 }
 
@@ -83,8 +89,8 @@ header {
     display: flex;
     justify-content: center;
     background-color: $backgroundGrisFonce;
-    border-top: 10px solid #EAEAEA;
-    
+    box-shadow: 0px 8px 8px 6px #636363;
+    padding: 8px;   
     
   }
 }
@@ -93,6 +99,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  
 }
 
 .form-localisation input {
@@ -101,6 +108,7 @@ header {
   background-color: $backgroundGrisFonce;
   text-align: left;
   font-weight: bold;
+  
 }
 
 input::placeholder {
@@ -119,7 +127,7 @@ i.fas.fa-map-marker-alt::before {
 }
 
 .form-button-choix-restaurants input {
-  background: linear-gradient(lighten($colorCrimson, 1%), $colorMauve);
+  background: linear-gradient(lighten($secondary, 1%), $primary);
   color: white;
   padding: 15px;
   border-radius: 20px;
@@ -281,7 +289,7 @@ h2 {
 }
 
 .coeur i:hover {
-  color: $colorIndianRed;
+  color: rgb(218, 15, 218, 0.8);
   font-weight: bold;
   background-clip: content-box;
 }

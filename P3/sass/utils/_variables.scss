@@ -4,7 +4,7 @@ $fontFamilyLogo : Shrikhand;
 $font-size-h1 : 1.5rem;
 $font-size-h2 : 1.2rem;
 $font-size-h3 : 1rem;
-$font-size-p : 0.5rem;
+$font-size-p : 1rem;
 
 $primary : rgb(147,86,220);
 $secondary : rgb(255,121,218);
@@ -13,14 +13,15 @@ $backgroundGris : #F6F6F6;;
 $backgroundGrisFonce : #EAEAEA;
 $backgroundFooter: #3D413F;
 
-$colorButton : #cc0033;
+$colorButton : linear-gradient(rgb(255,121,218), rgb(147,86,220));
 $colorRed : rgb(255, 0, 0);
 $colorBlue : rgb(0, 0, 255);
 $colorMauve : rgb(128, 0, 128);
 $colorBrique : rgb(178, 34, 34);
 $colorCrimson : rgb(220, 20, 60);
 $colorFuschia : rgb(255,0,255);
-$colorIndianRed : rgb(205,92,92)
+$colorIndianRed : rgb(205,92,92);
+$colorHoverCoeur : rgb(218, 15, 218, 0.8);
 
 
 

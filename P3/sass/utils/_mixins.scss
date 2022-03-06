@@ -70,7 +70,7 @@
   }
 
   .button-commander input {
-    background: linear-gradient(lighten($colorButton, 1%), $primary);
+    background: linear-gradient(#ff7edb, #9356dc);
     color: white;
     width: 200px;
     padding: 15px;
@@ -183,6 +183,10 @@ opacity: 1;
     cursor: pointer;
     text-decoration: none;
     color: black;
+    font-size: 1rem ;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 
