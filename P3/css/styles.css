@@ -7607,11 +7607,11 @@ body #page-accueil-container {
   border-top: 10px solid purple;
   border-bottom: 10px solid purple;
   border-radius: 50%;
-  -webkit-animation: loading 2s ease-in-out;
-  animation: loading 2s ease-in-out;
+  -webkit-animation: spinner 2s ease-in-out;
+  animation: spinner 2s ease-in-out;
 }
 
-@-webkit-keyframes loading {
+@-webkit-keyframes spinner {
   0% {
     transform: rotate(0deg);
   }
@@ -7619,7 +7619,7 @@ body #page-accueil-container {
     transform: rotate(360deg);
   }
 }
-@keyframes loading {
+@keyframes spinner {
   0% {
     transform: rotate(0deg);
   }
@@ -7647,10 +7647,7 @@ header {
 header .logo-ohmyfood {
   font-family: Shrikhand;
   font-size: 30px;
-}
-
-header .logo-ohmyfood h3.logo-ohmyfood {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 10px;
 }
 
@@ -7663,8 +7660,8 @@ header .logo-ohmyfood h3.logo-ohmyfood {
 .page-accueil-bloc-header .page-accueil-onglet-localisation {
   display: flex;
   justify-content: center;
-  background-color: #EAEAEA;
-  box-shadow: 0px 8px 8px 6px #636363;
+  background-color: #EAEAEAFF;
+  box-shadow: inset 0px 2px 0px 0px #c6c6c6;
   padding: 8px;
 }
 
@@ -7677,7 +7674,7 @@ header .logo-ohmyfood h3.logo-ohmyfood {
 .form-localisation input {
   padding: 10px 0;
   border: none;
-  background-color: #EAEAEA;
+  background-color: #EAEAEAFF;
   text-align: left;
   font-weight: bold;
 }
@@ -7711,7 +7708,7 @@ i.fas.fa-map-marker-alt::before {
   background: linear-gradient(#ff7edb, #9356dc);
   color: white;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
   margin-bottom: 40px;
 }
@@ -7735,11 +7732,12 @@ ul.fa-ul {
 }
 
 ul span {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
 ul.fa-ul li:hover {
-  background-color: #ffc6ef;
+  background-color: #e4d5f6;
   opacity: 0.5;
 }
 
@@ -7779,7 +7777,7 @@ i.fas.fa-store:hover {
 
 h1 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 h2 {
@@ -7810,6 +7808,11 @@ h2 {
   margin-bottom: 50px;
 }
 
+.LaNoteEnchantee .photo-card-restaurant img {
+  -o-object-position: center;
+  object-position: center;
+}
+
 .card-bloc-restaurant {
   display: flex;
   flex-direction: column;
@@ -7818,13 +7821,16 @@ h2 {
 .photo-card-restaurant {
   display: flex;
   position: relative;
+  justify-content: center;
 }
 
 .photo-card-restaurant img {
-  height: 200px;
+  height: 170px;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: bottom;
+  object-position: bottom;
   border-radius: 20px 20px 0 0;
 }
 
@@ -7834,11 +7840,13 @@ h2 {
   color: green;
   top: 10px;
   right: 5px;
-  padding: 0 5px;
-  margin-right: 20px;
+  margin-right: 7px;
   height: 30px;
   width: 90px;
   text-align: center;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 1px 0px;
+  font-weight: 100;
 }
 
 .texte-image h4 {
@@ -7847,8 +7855,10 @@ h2 {
 }
 
 .data-card-bloc-restaurant {
-  padding: 0 20px 0 5px;
-  box-shadow: 5px 5px 5px 0 #e2e2e2;
+  padding: 0 20px 0 15px;
+  box-shadow: 3px 3px 3px 0 #ecececff;
+  border-bottom-right-radius: 13px;
+  border-bottom-left-radius: 13px;
 }
 
 .data-card-bloc-restaurant h3 {
@@ -7866,13 +7876,14 @@ h2 {
 }
 
 .coeur i {
-  color: #9356dc;
+  color: black;
 }
 
 .coeur i:hover {
   color: rgba(218, 15, 218, 0.8);
   font-weight: bold;
-  background-clip: content-box;
+  background-clip: content-text;
+  fill: linear-gradient(#ff79da, #9356dc);
 }
 
 a {

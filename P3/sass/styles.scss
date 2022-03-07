@@ -29,6 +29,7 @@ body {
   animation: loadingSpinner 0.1s;
   animation-delay: 2s;
   animation-fill-mode: both; 
+  
 }
 
 .spinner { 
@@ -38,11 +39,11 @@ body {
   border-top: 10px solid $colorMauve;
   border-bottom: 10px solid $colorMauve;
   border-radius: 50%;
-  animation: loading 2s ease-in-out;
+  animation: spinner 2s ease-in-out;
   
 }
 
-@keyframes loading
+@keyframes spinner
 {
     0%
     { 
@@ -70,15 +71,13 @@ header {
 
   .logo-ohmyfood {
     font-family: $fontFamilyLogo;
-    font-size: 30px;
-
-    h3.logo-ohmyfood{      
-    margin-top: 15px;
+    font-size: 30px; 
+    margin-top: 25px;
     margin-bottom: 10px;
 
     }
   }
-}
+
 
 .page-accueil-bloc-header {
   display: flex;
@@ -89,7 +88,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: $backgroundGrisFonce;
-    box-shadow: 0px 8px 8px 6px #636363;
+    box-shadow: inset 0px 2px 0px 0px #c6c6c6;
     padding: 8px;   
     
   }
@@ -130,7 +129,7 @@ i.fas.fa-map-marker-alt::before {
   background: linear-gradient(lighten($secondary, 1%), $primary);
   color: white;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
   margin-bottom: 40px;
 }
@@ -156,11 +155,12 @@ ul.fa-ul{
 }
 
 ul span {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
 ul.fa-ul li:hover {
-  background-color: (lighten($secondary, 15%));
+  background-color: (lighten($primary, 30%));
   opacity: 0.5;
 }
 
@@ -230,6 +230,12 @@ h2 {
   margin-bottom: 50px;
 }
 
+.LaNoteEnchantee .photo-card-restaurant img {
+    object-position: center;
+
+   
+}
+
 .card-bloc-restaurant {
   display: flex;
   flex-direction: column;
@@ -238,14 +244,19 @@ h2 {
 .photo-card-restaurant {
   display: flex;
   position: relative;
+  justify-content: center;
+  
 }
 
 .photo-card-restaurant img {
-  height: 200px;
+  height: 170px;
   width: 100%;
   object-fit: cover;
+  object-position: bottom;
   border-radius: 20px 20px 0 0;
 }
+
+
 
 .texte-image {
   position: absolute;
@@ -253,11 +264,14 @@ h2 {
   color: green;
   top: 10px;
   right: 5px;
-  padding: 0 5px;
-  margin-right: 20px;
+  
+  margin-right: 7px;
   height: 30px;
   width: 90px;
   text-align: center;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 1px 0px;
+  font-weight: 100;
 }
 
 .texte-image h4 {
@@ -266,8 +280,10 @@ h2 {
 }
 
 .data-card-bloc-restaurant {
-  padding: 0 20px 0 5px;
-  box-shadow: 5px 5px 5px 0 #e2e2e2;
+  padding: 0 20px 0 15px;
+  box-shadow: 3px 3px 3px 0 #ecececff;
+  border-bottom-right-radius: 13px;
+  border-bottom-left-radius: 13px;
 }
 
 .data-card-bloc-restaurant h3 {
@@ -285,13 +301,14 @@ h2 {
 }
 
 .coeur i {
-  color: $primary;
+  color: black;
 }
 
 .coeur i:hover {
   color: rgb(218, 15, 218, 0.8);
   font-weight: bold;
-  background-clip: content-box;
+  background-clip: content-text;
+  fill: $colorButton;
 }
 
 @include liens;
