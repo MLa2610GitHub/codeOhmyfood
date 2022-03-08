@@ -52,26 +52,44 @@ header {
   background-color: $backgroundGris
 }
 
+.card-entrees {
+  animation: check 1.5s forwards;
+  opacity: 0;
+}
 
+@keyframes check{
+
+0% {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    }
 
 .toggle{
   display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #99E2D0;
+    right: 0px;
+    width: 5rem;
+    height: 7rem;
+    color: #FFF;
+    transform: translateX(100%);
+    transition: 0.5s ease;
   
 }
 
 
-.fa-stack{
-  font-size: 0.3em;
-  }
 
-  i{
-    vertical-align: middle
-  }
 
-  .clic-choix{
-    transform: rotate(60deg);
-    transition: transform 1s ease-out,
-  }
+  
 
 @include nomRestaurant;
 @include titreH2Menu;
