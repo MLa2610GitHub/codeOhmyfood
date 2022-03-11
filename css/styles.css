@@ -81,7 +81,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -452,7 +451,6 @@ template {
   margin-left: var(--fa-li-margin, 2.5em);
   padding-left: 0;
 }
-
 .fa-ul > li {
   position: relative;
 }
@@ -484,107 +482,65 @@ template {
 }
 
 .fa-beat {
-  -webkit-animation-name: fa-beat;
   animation-name: fa-beat;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
   animation-timing-function: var(--fa-animation-timing, ease-in-out);
 }
 
 .fa-bounce {
-  -webkit-animation-name: fa-bounce;
   animation-name: fa-bounce;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
   animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
 }
 
 .fa-fade {
-  -webkit-animation-name: fa-fade;
   animation-name: fa-fade;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
   animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-beat-fade {
-  -webkit-animation-name: fa-beat-fade;
   animation-name: fa-beat-fade;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
   animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-flip {
-  -webkit-animation-name: fa-flip;
   animation-name: fa-flip;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
   animation-timing-function: var(--fa-animation-timing, ease-in-out);
 }
 
 .fa-shake {
-  -webkit-animation-name: fa-shake;
   animation-name: fa-shake;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
   animation-timing-function: var(--fa-animation-timing, linear);
 }
 
 .fa-spin {
-  -webkit-animation-name: fa-spin;
   animation-name: fa-spin;
-  -webkit-animation-delay: var(--fa-animation-delay, 0);
   animation-delay: var(--fa-animation-delay, 0);
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 2s);
   animation-duration: var(--fa-animation-duration, 2s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
   animation-timing-function: var(--fa-animation-timing, linear);
 }
 
@@ -594,15 +550,10 @@ template {
 
 .fa-pulse,
 .fa-spin-pulse {
-  -webkit-animation-name: fa-spin;
   animation-name: fa-spin;
-  -webkit-animation-direction: var(--fa-animation-direction, normal);
   animation-direction: var(--fa-animation-direction, normal);
-  -webkit-animation-duration: var(--fa-animation-duration, 1s);
   animation-duration: var(--fa-animation-duration, 1s);
-  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
   animation-timing-function: var(--fa-animation-timing, steps(8));
 }
 
@@ -616,22 +567,11 @@ template {
 .fa-shake,
 .fa-spin,
 .fa-spin-pulse {
-    -webkit-animation-delay: -1ms;
     animation-delay: -1ms;
-    -webkit-animation-duration: 1ms;
     animation-duration: 1ms;
-    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     transition-delay: 0s;
     transition-duration: 0s;
-  }
-}
-@-webkit-keyframes fa-beat {
-  0%, 90% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
 @keyframes fa-beat {
@@ -640,29 +580,6 @@ template {
   }
   45% {
     transform: scale(var(--fa-beat-scale, 1.25));
-  }
-}
-@-webkit-keyframes fa-bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
-  }
-  30% {
-    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
-  }
-  50% {
-    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
   }
 }
 @keyframes fa-bounce {
@@ -688,24 +605,9 @@ template {
     transform: scale(1, 1) translateY(0);
   }
 }
-@-webkit-keyframes fa-fade {
-  50% {
-    opacity: var(--fa-fade-opacity, 0.4);
-  }
-}
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
-  }
-}
-@-webkit-keyframes fa-beat-fade {
-  0%, 100% {
-    opacity: var(--fa-beat-fade-opacity, 0.4);
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
 @keyframes fa-beat-fade {
@@ -718,43 +620,9 @@ template {
     transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
-@-webkit-keyframes fa-flip {
-  50% {
-    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
-  }
-}
 @keyframes fa-flip {
   50% {
     transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
-  }
-}
-@-webkit-keyframes fa-shake {
-  0% {
-    transform: rotate(-15deg);
-  }
-  4% {
-    transform: rotate(15deg);
-  }
-  8%, 24% {
-    transform: rotate(-18deg);
-  }
-  12%, 28% {
-    transform: rotate(18deg);
-  }
-  16% {
-    transform: rotate(-22deg);
-  }
-  20% {
-    transform: rotate(22deg);
-  }
-  32% {
-    transform: rotate(-12deg);
-  }
-  36% {
-    transform: rotate(12deg);
-  }
-  40%, 100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes fa-shake {
@@ -784,14 +652,6 @@ template {
   }
   40%, 100% {
     transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes fa-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @keyframes fa-spin {
@@ -864,43 +724,43 @@ template {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 .fa-0::before {
-  content: "0";
+  content: "\30 ";
 }
 
 .fa-1::before {
-  content: "1";
+  content: "\31 ";
 }
 
 .fa-2::before {
-  content: "2";
+  content: "\32 ";
 }
 
 .fa-3::before {
-  content: "3";
+  content: "\33 ";
 }
 
 .fa-4::before {
-  content: "4";
+  content: "\34 ";
 }
 
 .fa-5::before {
-  content: "5";
+  content: "\35 ";
 }
 
 .fa-6::before {
-  content: "6";
+  content: "\36 ";
 }
 
 .fa-7::before {
-  content: "7";
+  content: "\37 ";
 }
 
 .fa-8::before {
-  content: "8";
+  content: "\38 ";
 }
 
 .fa-9::before {
-  content: "9";
+  content: "\39 ";
 }
 
 .fa-a::before {
@@ -1320,11 +1180,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-asterisk::before {
-  content: "*";
+  content: "\*";
 }
 
 .fa-at::before {
-  content: "@";
+  content: "\@";
 }
 
 .fa-atom::before {
@@ -2848,15 +2708,15 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-dollar-sign::before {
-  content: "$";
+  content: "\$";
 }
 
 .fa-dollar::before {
-  content: "$";
+  content: "\$";
 }
 
 .fa-usd::before {
-  content: "$";
+  content: "\$";
 }
 
 .fa-dolly::before {
@@ -3080,7 +2940,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-equals::before {
-  content: "=";
+  content: "\=";
 }
 
 .fa-eraser::before {
@@ -3104,7 +2964,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-exclamation::before {
-  content: "!";
+  content: "\!";
 }
 
 .fa-expand::before {
@@ -3876,7 +3736,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-greater-than::before {
-  content: ">";
+  content: "\>";
 }
 
 .fa-greater-than-equal::before {
@@ -4120,7 +3980,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-hashtag::before {
-  content: "#";
+  content: "\#";
 }
 
 .fa-hat-cowboy::before {
@@ -4592,7 +4452,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-less-than::before {
-  content: "<";
+  content: "\<";
 }
 
 .fa-less-than-equal::before {
@@ -5268,11 +5128,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-percent::before {
-  content: "%";
+  content: "\%";
 }
 
 .fa-percentage::before {
-  content: "%";
+  content: "\%";
 }
 
 .fa-person::before {
@@ -5472,11 +5332,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-plus::before {
-  content: "+";
+  content: "\+";
 }
 
 .fa-add::before {
-  content: "+";
+  content: "\+";
 }
 
 .fa-plus-minus::before {
@@ -5548,7 +5408,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-question::before {
-  content: "?";
+  content: "\?";
 }
 
 .fa-quote-left::before {
@@ -7574,7 +7434,6 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
 }
-
 body #page-accueil-container {
   max-width: 667px;
   margin: 0 auto;
@@ -7582,67 +7441,10 @@ body #page-accueil-container {
   flex-direction: column;
 }
 
-.container-loading-spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #fffffff1;
-  transition: color 2s;
-  -webkit-animation: loadingSpinner 0.1s;
-  animation: loadingSpinner 0.1s;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.spinner {
-  width: 100px;
-  height: 100px;
-  border: 10px solid #e2e2e2;
-  border-top: 10px solid purple;
-  border-bottom: 10px solid purple;
-  border-radius: 50%;
-  -webkit-animation: spinner 2s linear infinite ease-in-out;
-  animation: spinner 2s linear infinite ease-in-out;
-}
-
-@-webkit-keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes loadingSpinner {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes loadingSpinner {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
 header {
   width: 100%;
   text-align: center;
 }
-
 header .logo-ohmyfood {
   font-family: Shrikhand;
   font-size: 30px;
@@ -7655,7 +7457,6 @@ header .logo-ohmyfood {
   flex-direction: column;
   background-color: #F6F6F6;
 }
-
 .page-accueil-bloc-header .page-accueil-onglet-localisation {
   display: flex;
   justify-content: center;
@@ -7678,16 +7479,6 @@ header .logo-ohmyfood {
   font-weight: bold;
 }
 
-input::-moz-placeholder {
-  color: black;
-  font-weight: 700;
-}
-
-input:-ms-input-placeholder {
-  color: black;
-  font-weight: 700;
-}
-
 input::placeholder {
   color: black;
   font-weight: 700;
@@ -7706,6 +7497,7 @@ i.fas.fa-map-marker-alt::before {
 .form-button-choix-restaurants input {
   background: linear-gradient(#ff7edb, #9356dc);
   color: white;
+  font-size: 20px;
   padding: 15px;
   border-radius: 25px;
   border: none;
@@ -7714,7 +7506,9 @@ i.fas.fa-map-marker-alt::before {
 }
 
 .form-button-choix-restaurants input:hover {
-  opacity: 0.6;
+  opacity: 0.7;
+  box-shadow: 3px 3px 3px 0px #c7c7c79a;
+  cursor: pointer;
 }
 
 .page-accueil-bloc-fonctionnement ul li {
@@ -7809,7 +7603,6 @@ h2 {
 }
 
 .LaNoteEnchantee .photo-card-restaurant img {
-  -o-object-position: center;
   object-position: center;
 }
 
@@ -7827,9 +7620,7 @@ h2 {
 .photo-card-restaurant img {
   height: 170px;
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: bottom;
   object-position: bottom;
   border-radius: 20px 20px 0 0;
 }
@@ -7877,15 +7668,73 @@ h2 {
 
 .coeur i {
   color: black;
+  font-size: 26px;
 }
 
 .coeur i:hover {
-  color: rgba(218, 15, 218, 0.8);
+  cursor: pointer;
   font-weight: bold;
   background-clip: content-text;
   fill: linear-gradient(#ff79da, #9356dc);
+  animation: coeur 3s ease forwards;
 }
 
+@keyframes coeur {
+  0% {
+    font-weight: 900;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+  }
+  100% {
+    font-weight: 900;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.container-loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  opacity: 1;
+  background-color: #fffffff1;
+  animation: loadingSpinner 2s forwards;
+}
+
+@keyframes loadingSpinner {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #e2e2e2;
+  border-top: 10px solid purple;
+  border-bottom: 10px solid purple;
+  border-radius: 50%;
+  animation: spinner 2s ease-in-out;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -7905,12 +7754,10 @@ footer {
   padding-top: 10px;
   margin-bottom: 2px;
 }
-
 .contenu-footer .logo-ohmyfood {
   padding-left: 20px;
   font-family: Shrikhand;
 }
-
 .contenu-footer .logo-ohmyfood .logo-ohmyfood h3 {
   margin-bottom: 0;
 }
@@ -7945,7 +7792,5 @@ li a {
   text-decoration: none;
   line-height: 1.5;
 }
-
-/*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=styles.css.map */

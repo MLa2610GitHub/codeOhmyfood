@@ -1,14 +1,279 @@
-@mixin nomRestaurant() {
-  .nom-restaurant {
+@mixin spinner {
+  .container-loading-spinner {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-left: 20px;
-    
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    opacity: 1;
+    background-color: #fffffff1;
+    animation: loadingSpinner 2s forwards;
+  }
+
+  @keyframes loadingSpinner {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+
+  .spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(226, 226, 226);
+    border-top: 10px solid $colorMauve;
+    border-bottom: 10px solid $colorMauve;
+    border-radius: 50%;
+    animation: spinner 2s ease-in-out;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
+@mixin headerLogo {
+  header {
+    width: 100%;
+    margin-top: 15px;
+  }
 
+  .top-header {
+    display: flex;
+    padding-top: 15px;
+  }
+
+  .fa-arrow-left {
+    padding: 15px;
+  }
+
+  .logo-ohmyfood {
+    text-align: center;
+  }
+}
+
+@mixin nomRestaurant {
+  .nom-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    font-family: shrikhand;
+    font-size: 15px;
+  }
+  main {
+    background-color: $backgroundGris;
+    border-radius: 40px 40px 0 0;
+    margin-top: -22px;
+  }
+
+  .titre-h1 {
+    margin: 0;
+  }
+}
+
+@mixin coeur {
+  .coeur i {
+    color: black;
+    font-size: 26px;
+  }
+
+  .coeur i:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background-clip: content-text;
+    fill: linear-gradient(#ff79da, #9356dc);
+    animation: coeur 3s ease forwards;
+  }
+
+  @keyframes coeur {
+    0% {
+      font-weight: 900;
+      background: -webkit-linear-gradient(#9356dc, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.1;
+    }
+    100% {
+      font-weight: 900;
+      background: -webkit-linear-gradient(#9356dc, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@mixin titreH2Menu() {
+  .titre-h2 {
+    margin-left: 25px;
+    border-bottom: 7px solid $tertiary;
+    width: 40px;
+    border-radius: 5px;
+  }
+}
+
+@mixin cardMenu() {
+  .card-entrees,
+  .card-plats,
+  .card-desserts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 auto 16px auto;
+    box-shadow: 5px 5px 5px 0 #e2e2e2;
+    width: 95%;
+    animation: check 1.5s forwards;
+    opacity: 0;
+  }
+
+  @keyframes check {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-entrees .texte h3,
+  .card-plats .texte h3,
+  .card-desserts .texte h3 {
+    font-size: 20px;
+  }
+  .card-entrees:hover,
+  .card-plats:hover,
+  .card-desserts:hover {
+    box-shadow: 3px 3px 3px #979797;
+  }
+}
+
+@mixin cardTextePrix {
+  .texte-prix {
+    display: flex;
+    width: 100%;
+    margin: 24px;
+  }
+
+  .texte-prix .texte {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .texte-prix h3 {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+  }
+
+  .texte-prix p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .texte-prix .prix {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 23px 0 5px;
+    padding: 0;
+    transition: 0.5s ease;
+  }
+
+  .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #99e2d0;
+    right: 0;
+    width: 80px;
+    height: 100px;
+    color: #fff;
+  }
+
+  .toggle:hover {
+    transition: 0.5s ease;
+    transform: translateX(100%);
+  }
+
+  @keyframes toggle {
+    100% {
+      transform: translateX(100%);
+      transition: 0.5s ease;
+    }
+  }
+}
+
+@mixin slideDown {
+  .liste-entrees,
+  .liste-plats,
+  .liste-desserts {
+    transition: 3s;
+    animation: slideDown 3s forwards;
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(20px);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@mixin boutonCommander() {
+  .button-commander {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-commander input {
+    background: linear-gradient(#ff7edb, #9356dc);
+    color: white;
+    width: 200px;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    margin: 20px 40px;
+    font-weight: 800;
+    box-shadow: 3px 3px 3px 0px #c7c7c7ff;
+  }
+
+  .button-commander input:hover {
+    opacity: 0.6;
+  }
+}
 
 @mixin footer {
   footer {
@@ -62,193 +327,14 @@
   }
 }
 
-@mixin boutonCommander() {
-  .button-commander {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .button-commander input {
-    background: linear-gradient(#ff7edb, #9356dc);
-    color: white;
-    width: 200px;
-    padding: 15px;
-    border-radius: 25px;
-    border: none;
-    margin: 20px 40px;
-    font-weight: 800;
-    box-shadow: 3px 3px 3px 0px #c7c7c7ff;
-  }
-
-  .button-commander input:hover {
-    opacity: 0.6;
-  }
-}
-
-@mixin titreH2Menu() {
-  .titre-h2 {
-    margin-left: 25px;
-    border-bottom: 7px solid $tertiary;
-    width: 40px;
-   border-radius: 5px;
-  }
-}
-
-@mixin cardEntrees() {
-  .card-entrees {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    background-color: white;
-    border-radius: 20px;
-    padding: 1px 20px 0 20px;
-    margin: 20px;
-    box-shadow: 5px 5px 5px 0 #e2e2e2;
-    width: 95%;
-    overflow: hidden; 
-     }
-
-    .card-entrees .texte h3 {
-          font-size: 20px;
-    }
-  }
-
-
-
- 
-
-@mixin cardPlats() {
-
-  .card-plats {
-   display: flex;
-    flex-direction: column;
-    align-items: center; 
-    background-color: white;
-    border-radius: 20px;
-    padding: 1px 20px 0 20px;
-    margin: 20px;
-    box-shadow: 5px 5px 5px 0 #e2e2e2;
-    width: 95%;
-    overflow: hidden;
-
-    }
-
-    .card-plats .texte h3 {
-          font-size: 20px;
-  }
-}
-
-@mixin cardDesserts() {
-
-  .card-desserts {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    background-color: white;
-    border-radius: 20px;
-    padding: 1px 20px 0 20px;
-    margin: 20px;
-    box-shadow: 5px 5px 5px 0 #e2e2e2;
-    width: 95%;
-    overflow: hidden;
-    }
-
-    .card-desserts .texte h3 {
-          font-size: 20px;
-  
-  
-  }
-}
-
-@mixin cardTextePrix {
-  .texte-prix {
-    display: flex;
-    width: 100%;   
-    margin: 25px; 
-  }
-
-  .texte {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .texte h3 {
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 22px; 
-     } 
-
-  .texte p {
-    margin-top: 8px;
-    margin-bottom: 0;
-    width: 90%; 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-  }
-
-  .prix {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-weight: bold;
-    margin: 0 25px 0 5px;
-    
-  }
-  
-.toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background: #99E2D0;
-    right: 0;
-    width: 80px;
-    height: 110px;
-    color: #FFF;
-    
-}
-}
-
-@mixin slideDown {
-  .liste-entrees .slideDown, .liste-plats .slideDown, .liste-desserts .slideDown {
-transition: 6s;
-animation: slideDown 4s;
-animation-fill-mode: both; 
-
-@keyframes slideDown {
-0% {
-transform: translateY(0);
-opacity: 0;
-}
-100% {
-transform: translateY-(-200);
-opacity: 1;
-}
-}
-}
-}
-
 @mixin liens() {
   a {
     cursor: pointer;
     text-decoration: none;
     color: black;
-    font-size: 1rem ;
+    font-size: 1rem;
     font-family: Roboto;
     font-size: 1rem;
     font-weight: 400;
   }
 }
-
-

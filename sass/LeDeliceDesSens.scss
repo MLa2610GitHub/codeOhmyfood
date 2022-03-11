@@ -8,10 +8,11 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
 
-  #page-accueil-container {
+  #bloc-page {
     max-width: 667px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     
   }
 }
@@ -22,13 +23,18 @@ header {
 
   .top-header {
     display: flex;
+     padding-top: 15px;
 
           .fa-arrow-left {
         padding: 15px;
 
         .logo-ohmyfood {
+          
           text-align: center;
           font-family: $fontFamilyLogo;
+          font-weight: normal;
+          font-size: 15px;
+         
         
       }
     }
@@ -42,35 +48,16 @@ header {
   .photo-card-restaurant img{
     height: 200px;
     width: 100%;
-  object-fit: cover;
+    object-fit: cover;
   }
 
-  main{
-  background-color: $backgroundGris
-}
 
-.header-bloc-menus{
-  display: flex
-}
-
-
-
-.card-texte-prix{
-  display: flex;
-}
-
-.prix{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; 
-}
-
+  
 
 @include nomRestaurant;
+@include coeur;
 @include titreH2Menu;
-@include cardEntrees;
-@include cardPlats;
-@include cardDesserts;
+@include cardMenu;
 @include cardTextePrix;
 @include slideDown;
 @include boutonCommander;
