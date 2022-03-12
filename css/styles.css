@@ -7583,7 +7583,7 @@ h2 {
   padding: 20px;
 }
 
-.liste-restaurants {
+.liste-restaurants1-2, .liste-restaurants3-4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

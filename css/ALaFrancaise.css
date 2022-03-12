@@ -7564,83 +7564,66 @@ main {
   border-radius: 5px;
 }
 
-.card-entrees,
-.card-plats,
-.card-desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card-menu {
+  position: relative;
+  overflow: hidden;
   background-color: white;
   border-radius: 20px;
-  margin: 0 auto 16px auto;
+  margin: 10px;
   box-shadow: 5px 5px 5px 0 #e2e2e2;
-  width: 95%;
-  animation: check 1.5s forwards;
-  opacity: 0;
-}
-
-@keyframes check {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.card-entrees .texte h3,
-.card-plats .texte h3,
-.card-desserts .texte h3 {
-  font-size: 20px;
-}
-
-.card-entrees:hover,
-.card-plats:hover,
-.card-desserts:hover {
-  box-shadow: 3px 3px 3px #979797;
+  width: 90%;
 }
 
 .texte-prix {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin: 24px;
 }
 
 .texte-prix .texte {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-left: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  padding: 16px;
 }
 
-.texte-prix h3 {
-  margin: 0;
+.texte-prix .texte h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin: 3px 0;
   font-size: 22px;
+  transition: width 0.3s ease;
 }
 
-.texte-prix p {
-  margin-top: 8px;
-  margin-bottom: 0;
-  white-space: nowrap;
+.texte-prix:hover .texte h3 {
+  width: 70%;
+}
+
+.texte-prix .texte p {
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 3px 0;
+  transition: width 0.3s ease;
+}
+
+.texte-prix:hover .texte p {
+  width: 50%;
 }
 
 .texte-prix .prix {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   font-weight: bold;
-  margin: 0 23px 0 5px;
-  padding: 0;
-  transition: 0.5s ease;
+  margin: 0 24px -28px 5px;
+  transition: 0.3s ease;
+}
+
+.texte-prix:hover .prix {
+  transform: translateX(-80px);
 }
 
 .toggle {
@@ -7648,24 +7631,30 @@ main {
   justify-content: center;
   align-items: center;
   position: absolute;
-  background: #99e2d0;
-  right: 0;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  left: 100%;
   width: 80px;
-  height: 100px;
-  color: #fff;
+  height: 100%;
+  bottom: 0;
+  transition: 0.3s ease;
 }
 
 .toggle:hover {
-  transition: 0.5s ease;
-  transform: translateX(100%);
+  transform: translateX(-80px);
 }
 
-@keyframes toggle {
-  100% {
-    transform: translateX(100%);
-    transition: 0.5s ease;
-  }
+.toggle i {
+  color: #fff;
+  font-family: FontAwesome;
+  font-size: 30px;
+  transition: transform 0.3s ease;
 }
+
+.toggle i:hover {
+  transform: rotate(360deg);
+}
+
 .liste-entrees,
 .liste-plats,
 .liste-desserts {
@@ -7674,12 +7663,16 @@ main {
 }
 @keyframes slideDown {
   0% {
-    transform: translateY(0);
     opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(15px);
   }
   100% {
-    transform: translateY(20px);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
