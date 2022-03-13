@@ -333,6 +333,14 @@ template {
 /**
  * Add the correct display in IE 10.
  */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*!
  * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -7433,9 +7441,11 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   min-height: 100vh;
+  width: 100%;
+  font-size: 1rem;
 }
 body #bloc-page {
-  max-width: 667px;
+  max-width: 767px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -7499,11 +7509,11 @@ header {
 
 .top-header {
   display: flex;
-  padding-top: 15px;
+  padding: 15px 0 0 25px;
 }
 
 .fa-arrow-left {
-  padding: 15px;
+  padding: 10px;
 }
 
 .logo-ohmyfood {
@@ -7514,9 +7524,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+  padding: 10px;
   font-family: shrikhand;
-  font-size: 15px;
 }
 
 main {
@@ -7527,11 +7536,13 @@ main {
 
 .titre-h1 {
   margin: 0;
+  padding-left: 24px;
 }
 
 .coeur i {
   color: black;
   font-size: 26px;
+  padding-right: 24px;
 }
 
 .coeur i:hover {
@@ -7558,7 +7569,7 @@ main {
   }
 }
 .titre-h2 {
-  margin-left: 25px;
+  padding-left: 30px;
   border-bottom: 7px solid #99e2d0;
   width: 40px;
   border-radius: 5px;
@@ -7568,100 +7579,85 @@ main {
   position: relative;
   overflow: hidden;
   background-color: white;
-  border-radius: 20px;
-  margin: 10px;
+  border-radius: 0 15px 15px 0;
+  padding: 20px;
+  margin: 15px;
   box-shadow: 5px 5px 5px 0 #e2e2e2;
-  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: padding-right 450ms ease-in-out;
+}
+.card-menu:hover {
+  padding-right: 55px;
+}
+.card-menu:hover .toggle {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.card-menu:hover .fa-circle-check {
+  transform: rotate(360deg);
+}
+
+.card-menu h3 {
+  margin: 0;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
 }
 
 .texte-prix {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 24px;
   width: 100%;
 }
 
-.texte-prix .texte {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 16px;
-}
-
-.texte-prix .texte h3 {
+.texte-prix p {
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin: 3px 0;
-  font-size: 22px;
-  transition: width 0.3s ease;
+  width: 80%;
 }
 
-.texte-prix:hover .texte h3 {
-  width: 70%;
-}
-
-.texte-prix .texte p {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 3px 0;
-  transition: width 0.3s ease;
-}
-
-.texte-prix:hover .texte p {
-  width: 50%;
-}
-
-.texte-prix .prix {
-  display: flex;
-  align-items: flex-end;
+.texte-prix span {
   font-weight: bold;
-  margin: 0 24px -28px 5px;
-  transition: 0.3s ease;
+  margin-right: 5px;
 }
 
-.texte-prix:hover .prix {
-  transform: translateX(-80px);
-}
-
-.toggle {
+.card-menu .toggle {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   background-color: #99e2d0;
-  border-radius: 0 20px 20px 0;
-  left: 100%;
-  width: 80px;
-  height: 100%;
-  bottom: 0;
-  transition: 0.3s ease;
+  border-radius: 0 15px 15px 0;
+  padding: 20px;
+  opacity: 0;
+  width: 50px;
+  height: 63px;
+  right: -50px;
+  top: 0;
+  transition: transform 330ms ease-in-out;
 }
-
-.toggle:hover {
-  transform: translateX(-80px);
-}
-
-.toggle i {
+.card-menu .toggle .fa-circle-check {
   color: #fff;
   font-family: FontAwesome;
   font-size: 30px;
-  transition: transform 0.3s ease;
-}
-
-.toggle i:hover {
-  transform: rotate(360deg);
+  transition: transform 500ms ease-in-out;
 }
 
 .liste-entrees,
 .liste-plats,
 .liste-desserts {
   transition: 3s;
-  animation: slideDown 3s forwards;
+  animation: slideMenu 3s forwards;
 }
-@keyframes slideDown {
+@keyframes slideMenu {
   0% {
     opacity: 0;
     transform: translateY(30px);

@@ -333,6 +333,14 @@ template {
 /**
  * Add the correct display in IE 10.
  */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*!
  * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -7571,7 +7579,7 @@ i.fas.fa-store:hover {
 
 h1 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 h2 {
