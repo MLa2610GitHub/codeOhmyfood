@@ -7,6 +7,7 @@ body {
   font-family: $fontFamily;
   box-sizing: border-box;
   min-height: 100vh;
+  overflow-y: hidden;
 
   #page-accueil-container {
     max-width: 667px;
@@ -15,8 +16,6 @@ body {
     flex-direction: column;
   }
 }
-
-
 
 header {
   width: 100%;
@@ -29,7 +28,6 @@ header {
     margin-bottom: 10px;
   }
 }
-
 
 .page-accueil-bloc-header {
   display: flex;
@@ -162,7 +160,8 @@ h2 {
   padding: 20px;
 }
 
-.liste-restaurants1-2, .liste-restaurants3-4 {
+.liste-restaurants1-2,
+.liste-restaurants3-4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -275,6 +274,92 @@ h2 {
   }
 }
 
+// Adaptation pour les appareils de format différent //
+/*media queries*/
+
+// Large devices (desktops, 992px and up)//
+@media screen and (min-width: 992px) {
+  body {
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
+  #page-accueil-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .fa-ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa-ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 8px;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .fa-ul li a {
+    display: flex;
+    align-items: baseline;
+  }
+
+  #page-accueil-section-restaurants {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .liste-restaurants1-2,
+  .liste-restaurants3-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .LaPaletteDuGout,
+  .LaNoteEnchantee,
+  .ALaFrancaise,
+  .LeDeliceDesSens {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+//*Medium devices (tablets, less than 992px)*//
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-accueil-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .photo-card-restaurant img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 @include spinner;
 @include liens;

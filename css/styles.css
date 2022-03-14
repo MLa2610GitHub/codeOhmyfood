@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -7441,6 +7442,7 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   min-height: 100vh;
+  overflow-y: hidden;
 }
 body #page-accueil-container {
   max-width: 667px;
@@ -7591,7 +7593,8 @@ h2 {
   padding: 20px;
 }
 
-.liste-restaurants1-2, .liste-restaurants3-4 {
+.liste-restaurants1-2,
+.liste-restaurants3-4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7700,6 +7703,86 @@ h2 {
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+/*media queries*/
+@media screen and (min-width: 992px) {
+  body {
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
+  #page-accueil-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .fa-ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa-ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .fa-ul li a {
+    display: flex;
+    align-items: baseline;
+  }
+
+  #page-accueil-section-restaurants {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .liste-restaurants1-2,
+.liste-restaurants3-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .LaPaletteDuGout,
+.LaNoteEnchantee,
+.ALaFrancaise,
+.LeDeliceDesSens {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-accueil-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .photo-card-restaurant img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .container-loading-spinner {
