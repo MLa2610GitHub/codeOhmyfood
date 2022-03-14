@@ -46,12 +46,13 @@
 @mixin headerLogo {
   header {
     width: 100%;
-    margin-top: 15px;
   }
 
   .top-header {
     display: flex;
-    padding: 15px 0 0 25px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 65px 10px 0;
   }
 
   .fa-arrow-left {
@@ -59,7 +60,18 @@
   }
 
   .logo-ohmyfood {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .logo-ohmyfood img{
+    width: 90%;
+  }
+
+  .photo-card-restaurant img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 220px;
   }
 }
 
@@ -70,19 +82,18 @@
     align-items: center;
     padding: 10px;
     font-family: shrikhand;
-    $font-size-h1 : 1.6rem;
-
-
-      }
+    $font-size-h1: 1.6rem;
+  }
   main {
+    display: flex;
     background-color: $backgroundGris;
-    border-radius: 40px 40px 0 0;
+    border-radius: 28px 28px 0 0;
     margin-top: -22px;
   }
 
   .titre-h1 {
     margin: 0;
-    padding-left: 24px;
+    padding-left: 15px;
   }
 }
 
@@ -120,7 +131,8 @@
 
 @mixin titreH2Menu() {
   .titre-h2 {
-    padding-left: 30px;
+    padding-left: 2px;
+    margin-left: 18px;
     border-bottom: 7px solid $tertiary;
     width: 40px;
     border-radius: 5px;
@@ -132,9 +144,9 @@
     position: relative;
     overflow: hidden;
     background-color: white;
-  
-    border-radius: 0 15px 15px 0;
-    padding: 20px;
+    line-height: 1.3;
+    border-radius: 15px;
+    padding: 15px;
     margin: 15px;
     box-shadow: 5px 5px 5px 0 #e2e2e2;
     overflow: hidden;
@@ -144,14 +156,19 @@
     &:hover {
       padding-right: 55px;
     }
+    &:hover .texte-prix p {
+      width: calc(100% - 33%);
+    }
+    &:hover .texte-prix span {
+      transform: translate(-50px);
+    }
+
     &:hover .toggle {
       opacity: 1;
       transform: translate(-50px);
-     
     }
     &:hover .fa-circle-check {
       transform: rotate(360deg);
-     
     }
   }
 
@@ -162,7 +179,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 80%;
-    
   }
 
   .texte-prix {
@@ -171,15 +187,14 @@
     align-items: center;
     line-height: 24px;
     width: 100%;
-    
   }
 
   .texte-prix p {
-      margin: 0;
+    margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 80%;
+    width: 90%;
   }
 
   .texte-prix span {
@@ -187,7 +202,6 @@
     margin-right: 5px;
   }
 
-  
   .card-menu .toggle {
     display: flex;
     justify-content: center;
@@ -195,17 +209,17 @@
     position: absolute;
     background-color: #99e2d0;
     border-radius: 0 15px 15px 0;
-    padding: 20px;
+    padding: 10px;
     opacity: 0;
-    width: 50px;
-    height: 63px;
+    width: 40px;
+    height: 61px;
     right: -50px;
     top: 0;
     transition: transform 330ms ease-in-out;
     & .fa-circle-check {
       color: #fff;
       font-family: FontAwesome;
-      font-size: 30px;      
+      font-size: 30px;
       transition: transform 500ms ease-in-out;
     }
   }
@@ -268,7 +282,6 @@
 
   .button-commander input:hover {
     opacity: 0.6;
-    
   }
 }
 
