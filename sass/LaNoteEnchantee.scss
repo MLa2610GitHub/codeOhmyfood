@@ -7,13 +7,16 @@ body {
   font-family: $fontFamily;
   box-sizing: border-box;
   min-height: 100vh;
+  width: 100%;
+  font-size: 14px;
+  
+
 
   #bloc-page {
-    max-width: 667px;
+    max-width: 767px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
   }
 }
 
@@ -33,13 +36,19 @@ header {
           text-align: center;
           font-family: $fontFamilyLogo;
           font-weight: normal;
-          font-size: 15px;
+          font-size: 12px;
          
         
       }
     }
   }
 }
+
+.titre-h1 {
+    margin: 0;
+    padding-left: 5px;
+    font-size: 13px;
+     }
 
   .photo-card-restaurant{
     display: flex;
@@ -51,9 +60,110 @@ header {
     object-fit: cover;
   }
 
+// Adaptation pour les appareils de format différent //
+/*media queries*/
+
+// Large devices (desktops, 992px and up)//
+@media screen and (min-width: 992px) {
+  body {
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
+  #bloc-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .top-header{
+    display: flex;
+    justify-content: flex-start;
+
+  }
+
+  .titre-h1 {
+    margin: 0;
+    padding-left: 30px;
+     }
+
+   .titre-h2{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-desktop-entrees-plats{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 20px 20px 20px;
+  }
 
   
+  .liste-entrees, .liste-plats {
+    width: 50%;
+  }
 
+  .container-desktop-desserts{
+    display: flex;
+    flex-direction: column;
+       
+  }
+
+
+   .liste-desserts {
+    display: flex;
+    margin: 3px 0;
+      
+  }
+
+ .liste-desserts .card-menu {
+    width: 32%;
+      
+  }
+
+  .button-commander{
+        margin-bottom: 10px;
+  }
+
+    .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  }
+
+//*Medium devices (tablets, less than 992px)*//
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-accueil-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .coeur {
+   padding-right: 40px;
+    }
+
+  .card-menu{
+    padding: 20px;
+  }
+
+   .button-commander{
+        margin-bottom: 10px;
+  }
+
+   .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  }
+  
+
+
+@include spinner;
+@include headerLogo;
 @include nomRestaurant;
 @include coeur;
 @include titreH2Menu;
@@ -62,3 +172,5 @@ header {
 @include boutonCommander;
 @include footer;
 @include liens;
+  
+
