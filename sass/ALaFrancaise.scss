@@ -8,9 +8,7 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
-  font-size: 1rem;
-  
-
+  font-size: 16px;
 
   #bloc-page {
     max-width: 767px;
@@ -20,39 +18,15 @@ body {
   }
 }
 
-header {
-  width: 100%;
-  margin-top: 15px;
-
-  .top-header {
-    display: flex;
-     padding-top: 15px;
-
-          .fa-arrow-left {
-        padding: 15px;
-
-        .logo-ohmyfood {
-          
-          text-align: center;
-          font-family: $fontFamilyLogo;
-          font-weight: normal;
-          font-size: 15px;
-         
-        
-      }
-    }
-  }
+.photo-card-restaurant {
+  display: flex;
 }
 
-  .photo-card-restaurant{
-    display: flex;
-  }
-
-  .photo-card-restaurant img{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
+.photo-card-restaurant img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
 
 // Adaptation pour les appareils de format différent //
 /*media queries*/
@@ -64,68 +38,58 @@ header {
     min-height: 100vh;
   }
 
-  /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
   #bloc-page {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  .top-header{
-    display: flex;
-    justify-content: flex-start;
-
   }
 
   .titre-h1 {
     margin: 0;
     padding-left: 30px;
-     }
+  }
 
-   .titre-h2{
+  .titre-h2 {
     display: flex;
     flex-direction: column;
   }
 
-  .container-desktop-entrees-plats{
+  .container-desktop-entrees-plats {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin: 0 20px 20px 20px;
   }
 
-  
-  .liste-entrees, .liste-plats {
+  .liste-entrees,
+  .liste-plats {
     width: 50%;
   }
 
-  .container-desktop-desserts{
+  .container-desktop-desserts {
     display: flex;
     flex-direction: column;
-       
   }
 
-
-   .liste-desserts {
+  .liste-desserts {
     display: flex;
     margin: 3px 0;
-      
   }
 
- .liste-desserts .card-menu {
+  .liste-desserts .card-menu {
     width: 32%;
-      
   }
 
-  .button-commander{
-        margin-bottom: 10px;
+  .button-commander {
+    margin-bottom: 10px;
   }
 
-    .contenu-footer {
+  .contenu-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  }
+}
 
 //*Medium devices (tablets, less than 992px)*//
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -135,26 +99,24 @@ header {
   }
 
   .coeur {
-   padding-right: 40px;
-    }
+    padding-right: 40px;
+  }
 
-  .card-menu{
+  .card-menu {
     padding: 20px;
   }
 
-   .button-commander{
-        margin-bottom: 10px;
+  .button-commander {
+    margin-bottom: 10px;
   }
 
-   .contenu-footer {
+  .contenu-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  }
-  
-
+}
 
 @include spinner;
 @include headerLogo;
@@ -166,5 +128,3 @@ header {
 @include boutonCommander;
 @include footer;
 @include liens;
-  
-

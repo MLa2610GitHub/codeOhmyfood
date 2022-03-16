@@ -55,15 +55,11 @@
     padding: 15px 65px 10px 0;
   }
 
-  .fa-arrow-left {
-    padding: 10px;
-  }
-
   .logo-ohmyfood {
     display: flex;
     justify-content: center;
   }
-  .logo-ohmyfood img{
+  .logo-ohmyfood img {
     width: 90%;
   }
 
@@ -80,22 +76,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px;
+    padding: 0 24px;
     font-family: shrikhand;
-   
+    font-size: 14px;
   }
+
   main {
     display: flex;
     flex-direction: column;
     background-color: $backgroundGris;
     border-radius: 28px 28px 0 0;
     margin-top: -22px;
-  }
-
-  .titre-h1 {
-    margin: 0;
-    padding-left: 5px;
-    font-size: 100;
   }
 }
 
@@ -138,15 +129,12 @@
     border-bottom: 4px solid $tertiary;
     width: 16px;
     border-radius: 3px;
-  
-}
+  }
 
   p {
     margin: 0 0 0 -27px;
   }
-   }
-
-
+}
 
 @mixin cardMenu() {
   .card-menu {
@@ -163,7 +151,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     transition: padding-right 450ms ease-in-out;
-    
+
     &:hover .texte-prix p {
       width: calc(100% - 33%);
     }
@@ -174,6 +162,7 @@
     &:hover .toggle {
       opacity: 1;
       transform: translate(-50px);
+      cursor: pointer;
     }
     &:hover .fa-circle-check {
       transform: rotate(360deg);
@@ -247,7 +236,6 @@
   .liste-entrees,
   .liste-plats,
   .liste-desserts {
-    
     transition: 3s;
     animation: slideMenu 3s forwards;
 
@@ -276,13 +264,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 35px;
-       }
-
-  
-
+  }
 
   .button-commander input {
-   
     background: linear-gradient(#ff7edb, #9356dc);
     color: white;
     width: 200px;
@@ -296,6 +280,8 @@
 
   .button-commander input:hover {
     opacity: 0.6;
+    box-shadow: 3px 3px 3px 0px #979797;
+    cursor: pointer;
   }
 }
 
