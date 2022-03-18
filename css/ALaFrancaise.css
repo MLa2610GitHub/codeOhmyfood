@@ -7437,6 +7437,9 @@ readers do not read off random characters that represent icons */
   border-width: 0;
 }
 
+/*Définition des polices utilisées*/
+/*Le body prend 100% de la hauteur du viewport, c'est-à-dire de la zone de visualisation du navigateur. On utilise min-height, et non height. pour permettre au contenu supplémentaire de ne pas déborder du corps de page*/
+
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -7444,6 +7447,11 @@ body {
   width: 100%;
   font-size: 16px;
 }
+
+
+/*Le projet est conçu en mobile-first*/
+/*Le contenu de la page est emballé dans une div et centré*/
+
 body #bloc-page {
   max-width: 767px;
   margin: 0 auto;
@@ -7461,7 +7469,7 @@ body #bloc-page {
   object-fit: cover;
 }
 
-/*media queries*/
+/*media queries : adaptation pour les écrans d'ordinateur*/
 @media screen and (min-width: 992px) {
   body {
     box-sizing: border-box;
@@ -7520,6 +7528,8 @@ body #bloc-page {
     align-items: center;
   }
 }
+
+/*media queries : adaptation pour les écrans des tablettes*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #page-accueil-container {
     width: 70%;
@@ -7586,6 +7596,8 @@ body #bloc-page {
     transform: rotate(360deg);
   }
 }
+
+/*Le header est présent sur toutes les pages avec le logo du site Ohmyfood!. Sur les pages menu, il contient en plus un bouton de retour vers la page d'accueil*/
 header {
   width: 100%;
 }
@@ -7605,6 +7617,8 @@ header {
 .logo-ohmyfood img {
   width: 90%;
 }
+
+/*Chaque page Resto comprend le nom du restaurant, une grande photo qui prend toute la largeur et le menu proposé*/
 
 .photo-card-restaurant img {
   object-fit: cover;
@@ -7630,6 +7644,7 @@ main {
   margin-top: -22px;
 }
 
+/*Chaque page comprend un bouton "J'aime" en forme de coeur, qui se remplit progressivement au clic ou au survol grâce à une animation CSS*/
 .coeur i {
   color: black;
   font-size: 26px;
@@ -7671,6 +7686,7 @@ p {
   margin: 0 0 0 -27px;
 }
 
+/*Quand l'internaute clique sur les plats qu'il veut commander, une petite coche apparaît et coulisse vers la gauche. Quand le nom du plat commandé est trop long, il est rogné avec des points de suspension*/
 .card-menu {
   position: relative;
   overflow: hidden;
@@ -7753,6 +7769,8 @@ p {
   transition: transform 500ms ease-in-out;
 }
 
+/*A l'arrivée sur chaque page Menu, les plats apparaissent progressivement par groupe "Entrées", "Plats" et "Desserts" avec un léger décalage dans le temps*/
+
 .liste-entrees,
 .liste-plats,
 .liste-desserts {
@@ -7773,6 +7791,8 @@ p {
     transform: translateY(0);
   }
 }
+
+/*Bouton "Commander" : au survol, la couleur de fond s'éclaircit légèrement et l'ombre portée devient plus visible*/
 
 .button-commander {
   display: flex;
@@ -7799,6 +7819,8 @@ p {
   box-shadow: 3px 3px 3px 0px #979797;
   cursor: pointer;
 }
+
+/*Le même footer est présent sur toutes les pages du site. Quand on clique sur "Contact", on est renvoyé vers une adresse mail*/
 
 footer {
   background-color: #353535;

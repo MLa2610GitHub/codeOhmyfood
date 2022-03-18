@@ -7469,18 +7469,28 @@ readers do not read off random characters that represent icons */
   border-width: 0;
 }
 
+/*Définition des polices utilisées*/
+/*Le body prend 100% de la largeur et 100% de la hauteur du viewport, c'est-à-dire de la zone de visualisation du navigateur. On utilise min-height, et non height. pour permettre au contenu supplémentaire de ne pas déborder du corps de page*/
+
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  font-size: 16px;
   min-height: 100vh;
+  width: 100%;
   overflow-x: hidden;
 }
+
+/*Le projet est conçu en mobile-first*/
+/*Le contenu de la page est emballé dans une div et centré*/
 body #page-accueil-container {
   max-width: 667px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
+
+/*Le header de la page d'accueil contient le logo du site Ohmyfood!*/
 
 header {
   width: 100%;
@@ -7498,6 +7508,8 @@ header .logo-ohmyfood {
   flex-direction: column;
   background-color: #f6f6f6;
 }
+
+/*Affichage de la localisation des restaurants*/
 .page-accueil-bloc-header .page-accueil-onglet-localisation {
   display: flex;
   justify-content: center;
@@ -7529,11 +7541,15 @@ i.fas.fa-map-marker-alt::before {
   margin-right: 20px;
 }
 
+/*Courte présentation de l'entreprise*/
+
 .page-accueil-header-texte {
   background-color: #f6f6f6;
   padding: 20px;
   text-align: center;
 }
+
+/*Bouton "Explorer" : au survol, la couleur de fond s'éclaircit légèrement et l'ombre portée devient plus visible*/
 
 .form-button-choix-restaurants input {
   background: linear-gradient(#ff7edb, #9356dc);
@@ -7551,6 +7567,8 @@ i.fas.fa-map-marker-alt::before {
   box-shadow: 3px 3px 3px 0px #979797;
   cursor: pointer;
 }
+
+/*Présentation du fonctionnement du site*/
 
 .page-accueil-bloc-fonctionnement ul li {
   background-color: #f6f6f6;
@@ -7618,6 +7636,8 @@ h1 {
 h2 {
   margin-left: 10px;
 }
+
+/*Une section de la page d'accueil présente les quatre restaurants sous forme de card. */
 
 #page-accueil-section-restaurants {
   background-color: #f6f6f6;
@@ -7702,6 +7722,8 @@ h2 {
   margin-top: 3px;
 }
 
+/*A côté du nom de chaque restaurant, un bouton "J'aime" en forme de coeur se remplit progressivement au clic ou au survol grâce à une animation CSS*/
+
 .nom-restaurant-et-coeur {
   display: flex;
   justify-content: space-between;
@@ -7736,14 +7758,15 @@ h2 {
     -webkit-text-fill-color: transparent;
   }
 }
-/*media queries*/
+
+
+/*media queries : adaptation pour les écrans d'ordinateur*/
 @media screen and (min-width: 992px) {
   body {
     box-sizing: border-box;
     min-height: 100vh;
   }
 
-  /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
   #page-accueil-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -7797,6 +7820,8 @@ h2 {
     align-items: center;
   }
 }
+
+/*media queries : adaptation pour les écrans des tablettes*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #page-accueil-container {
     width: 70%;
@@ -7826,6 +7851,9 @@ h2 {
     align-items: center;
   }
 }
+
+
+/*Un loading-spinner apparaît pendant deux secondes quand on arrive sur la page d'accueil*/
 .container-loading-spinner {
   display: flex;
   justify-content: center;
@@ -7867,6 +7895,8 @@ h2 {
     transform: rotate(360deg);
   }
 }
+
+/*Apparence des liens*/
 a {
   cursor: pointer;
   text-decoration: none;
@@ -7876,6 +7906,8 @@ a {
   font-size: 1rem;
   font-weight: 400;
 }
+
+/*Le même footer est présent sur toutes les pages du site. Quand on clique sur "Contact", on est renvoyé vers une adresse mail*/
 
 footer {
   background-color: #353535;

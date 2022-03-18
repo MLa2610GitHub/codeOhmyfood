@@ -7437,13 +7437,21 @@ readers do not read off random characters that represent icons */
   border-width: 0;
 }
 
+/*Définition des polices utilisées*/
+/*Le body prend 100% de la largeur et 100% de la hauteur du viewport, c'est-à-dire de la zone de visualisation du navigateur. On utilise min-height, et non height. pour permettre au contenu supplémentaire de ne pas déborder du corps de page*/
+
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
   box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
-  font-size: 16px;
+  
 }
+
+/*Le projet est conçu en mobile-first*/
+/*Le contenu de la page est emballé dans une div et centré*/
+
 body #bloc-page {
   max-width: 767px;
   margin: 0 auto;
@@ -7461,7 +7469,7 @@ body #bloc-page {
   object-fit: cover;
 }
 
-/*media queries*/
+/*media queries : adaptation pour les écrans d'ordinateur*/
 @media screen and (min-width: 992px) {
   body {
     box-sizing: border-box;
@@ -7520,6 +7528,8 @@ body #bloc-page {
     align-items: center;
   }
 }
+
+/*media queries : adaptation pour les écrans des tablettes*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #page-accueil-container {
     width: 70%;
@@ -7545,6 +7555,7 @@ body #bloc-page {
     align-items: center;
   }
 }
+
 .container-loading-spinner {
   display: flex;
   justify-content: center;
@@ -7586,6 +7597,9 @@ body #bloc-page {
     transform: rotate(360deg);
   }
 }
+
+/*Le header est présent sur toutes les pages avec le logo du site Ohmyfood!. Sur les pages menu, il contient en plus un bouton de retour vers la page d'accueil*/
+
 header {
   width: 100%;
 }
@@ -7605,6 +7619,8 @@ header {
 .logo-ohmyfood img {
   width: 90%;
 }
+
+/*Chaque page Resto comprend le nom du restaurant, une grande photo qui prend toute la largeur et le menu proposé*/
 
 .photo-card-restaurant img {
   object-fit: cover;
@@ -7629,6 +7645,8 @@ main {
   border-radius: 28px 28px 0 0;
   margin-top: -22px;
 }
+
+/*Chaque page comprend un bouton "J'aime" en forme de coeur, qui se remplit progressivement au clic ou au survol grâce à une animation CSS*/
 
 .coeur i {
   color: black;
@@ -7659,6 +7677,7 @@ main {
     -webkit-text-fill-color: transparent;
   }
 }
+
 .titre-h2 {
   padding-left: 30px;
   margin: 0 0 0 17px;
@@ -7670,6 +7689,8 @@ main {
 p {
   margin: 0 0 0 -27px;
 }
+
+/*Quand l'internaute clique sur les plats qu'il veut commander, une petite coche apparaît et coulisse vers la gauche. Quand le nom du plat commandé est trop long, il est rogné avec des points de suspension*/
 
 .card-menu {
   position: relative;
@@ -7753,6 +7774,8 @@ p {
   transition: transform 500ms ease-in-out;
 }
 
+/*A l'arrivée sur chaque page Menu, les plats apparaissent progressivement par groupe "Entrées", "Plats" et "Desserts" avec un léger décalage dans le temps*/
+
 .liste-entrees,
 .liste-plats,
 .liste-desserts {
@@ -7774,6 +7797,8 @@ p {
   }
 }
 
+/*Bouton "Commander" : au survol, la couleur de fond s'éclaircit légèrement et l'ombre portée devient plus visible*/
+
 .button-commander {
   display: flex;
   flex-direction: column;
@@ -7790,6 +7815,7 @@ p {
   border-radius: 25px;
   border: none;
   margin: 20px 40px;
+
   font-weight: 800;
   box-shadow: 3px 3px 3px 0px #c7c7c7ff;
 }
@@ -7799,6 +7825,8 @@ p {
   box-shadow: 3px 3px 3px 0px #979797;
   cursor: pointer;
 }
+
+/*Le même footer est présent sur toutes les pages du site. Quand on clique sur "Contact", on est renvoyé vers une adresse mail*/
 
 footer {
   background-color: #353535;
