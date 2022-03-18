@@ -100,8 +100,8 @@
   .coeur i:hover {
     cursor: pointer;
     font-weight: bold;
-    background-clip: content-text;
-    fill: linear-gradient(#ff79da, #9356dc);
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
     animation: coeur 3s ease forwards;
   }
 
