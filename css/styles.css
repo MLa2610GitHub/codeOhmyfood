@@ -188,9 +188,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -198,9 +198,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -209,9 +209,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -261,8 +261,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -272,8 +272,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -281,7 +281,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -291,7 +291,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -505,10 +505,7 @@ template {
   animation-direction: var(--fa-animation-direction, normal);
   animation-duration: var(--fa-animation-duration, 1s);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(
-    --fa-animation-timing,
-    cubic-bezier(0.28, 0.84, 0.42, 1)
-  );
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
 }
 
 .fa-fade {
@@ -517,10 +514,7 @@ template {
   animation-direction: var(--fa-animation-direction, normal);
   animation-duration: var(--fa-animation-duration, 1s);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(
-    --fa-animation-timing,
-    cubic-bezier(0.4, 0, 0.6, 1)
-  );
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-beat-fade {
@@ -529,10 +523,7 @@ template {
   animation-direction: var(--fa-animation-direction, normal);
   animation-duration: var(--fa-animation-duration, 1s);
   animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-timing-function: var(
-    --fa-animation-timing,
-    cubic-bezier(0.4, 0, 0.6, 1)
-  );
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
 }
 
 .fa-flip {
@@ -577,14 +568,14 @@ template {
 
 @media (prefers-reduced-motion: reduce) {
   .fa-beat,
-  .fa-bounce,
-  .fa-fade,
-  .fa-beat-fade,
-  .fa-flip,
-  .fa-pulse,
-  .fa-shake,
-  .fa-spin,
-  .fa-spin-pulse {
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
     animation-delay: -1ms;
     animation-duration: 1ms;
     animation-iteration-count: 1;
@@ -593,8 +584,7 @@ template {
   }
 }
 @keyframes fa-beat {
-  0%,
-  90% {
+  0%, 90% {
     transform: scale(1);
   }
   45% {
@@ -606,25 +596,13 @@ template {
     transform: scale(1, 1) translateY(0);
   }
   10% {
-    transform: scale(
-        var(--fa-bounce-start-scale-x, 1.1),
-        var(--fa-bounce-start-scale-y, 0.9)
-      )
-      translateY(0);
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
   }
   30% {
-    transform: scale(
-        var(--fa-bounce-jump-scale-x, 0.9),
-        var(--fa-bounce-jump-scale-y, 1.1)
-      )
-      translateY(var(--fa-bounce-height, -0.5em));
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
   }
   50% {
-    transform: scale(
-        var(--fa-bounce-land-scale-x, 1.05),
-        var(--fa-bounce-land-scale-y, 0.95)
-      )
-      translateY(0);
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
   }
   57% {
     transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
@@ -642,8 +620,7 @@ template {
   }
 }
 @keyframes fa-beat-fade {
-  0%,
-  100% {
+  0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
     transform: scale(1);
   }
@@ -654,12 +631,7 @@ template {
 }
 @keyframes fa-flip {
   50% {
-    transform: rotate3d(
-      var(--fa-flip-x, 0),
-      var(--fa-flip-y, 1),
-      var(--fa-flip-z, 0),
-      var(--fa-flip-angle, -180deg)
-    );
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
 @keyframes fa-shake {
@@ -669,12 +641,10 @@ template {
   4% {
     transform: rotate(15deg);
   }
-  8%,
-  24% {
+  8%, 24% {
     transform: rotate(-18deg);
   }
-  12%,
-  28% {
+  12%, 28% {
     transform: rotate(18deg);
   }
   16% {
@@ -689,8 +659,7 @@ template {
   36% {
     transform: rotate(12deg);
   }
-  40%,
-  100% {
+  40%, 100% {
     transform: rotate(0deg);
   }
 }
@@ -7469,28 +7438,18 @@ readers do not read off random characters that represent icons */
   border-width: 0;
 }
 
-/*Définition des polices utilisées*/
-/*Le body prend 100% de la largeur et 100% de la hauteur du viewport, c'est-à-dire de la zone de visualisation du navigateur. On utilise min-height, et non height. pour permettre au contenu supplémentaire de ne pas déborder du corps de page*/
-
 body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  font-size: 16px;
   min-height: 100vh;
-  width: 100%;
   overflow-x: hidden;
 }
-
-/*Le projet est conçu en mobile-first*/
-/*Le contenu de la page est emballé dans une div et centré*/
 body #page-accueil-container {
   max-width: 667px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-
-/*Le header de la page d'accueil contient le logo du site Ohmyfood!*/
 
 header {
   width: 100%;
@@ -7508,8 +7467,6 @@ header .logo-ohmyfood {
   flex-direction: column;
   background-color: #f6f6f6;
 }
-
-/*Affichage de la localisation des restaurants*/
 .page-accueil-bloc-header .page-accueil-onglet-localisation {
   display: flex;
   justify-content: center;
@@ -7541,15 +7498,11 @@ i.fas.fa-map-marker-alt::before {
   margin-right: 20px;
 }
 
-/*Courte présentation de l'entreprise*/
-
 .page-accueil-header-texte {
   background-color: #f6f6f6;
   padding: 20px;
   text-align: center;
 }
-
-/*Bouton "Explorer" : au survol, la couleur de fond s'éclaircit légèrement et l'ombre portée devient plus visible*/
 
 .form-button-choix-restaurants input {
   background: linear-gradient(#ff7edb, #9356dc);
@@ -7567,8 +7520,6 @@ i.fas.fa-map-marker-alt::before {
   box-shadow: 3px 3px 3px 0px #979797;
   cursor: pointer;
 }
-
-/*Présentation du fonctionnement du site*/
 
 .page-accueil-bloc-fonctionnement ul li {
   background-color: #f6f6f6;
@@ -7637,8 +7588,6 @@ h2 {
   margin-left: 10px;
 }
 
-/*Une section de la page d'accueil présente les quatre restaurants sous forme de card. */
-
 #page-accueil-section-restaurants {
   background-color: #f6f6f6;
   padding: 20px;
@@ -7655,7 +7604,7 @@ h2 {
 .LaNoteEnchantee,
 .ALaFrancaise,
 .LeDeliceDesSens {
-  background-color: white;
+  background-color: #fafafa;
   margin-bottom: 20px;
   border-radius: 20px;
 }
@@ -7715,58 +7664,36 @@ h2 {
 }
 
 .data-card-bloc-restaurant h3 {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .data-card-bloc-restaurant p {
-  margin-top: 3px;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 1;
 }
-
-/*A côté du nom de chaque restaurant, un bouton "J'aime" en forme de coeur se remplit progressivement au clic ou au survol grâce à une animation CSS*/
 
 .nom-restaurant-et-coeur {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
-.coeur i {
-  color: black;
-  font-size: 26px;
+.coeur {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 19px;
 }
 
-.coeur i:hover {
-  cursor: pointer;
-  font-weight: bold;
-  background-clip: text;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  animation: coeur 3s ease forwards;
-}
-
-@keyframes coeur {
-  0% {
-    font-weight: 900;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0.1;
-  }
-  100% {
-    font-weight: 900;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-
-/*media queries : adaptation pour les écrans d'ordinateur*/
+/*media queries*/
 @media screen and (min-width: 992px) {
   body {
     box-sizing: border-box;
     min-height: 100vh;
   }
 
+  /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
   #page-accueil-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -7799,16 +7726,16 @@ h2 {
   }
 
   .liste-restaurants1-2,
-  .liste-restaurants3-4 {
+.liste-restaurants3-4 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .LaPaletteDuGout,
-  .LaNoteEnchantee,
-  .ALaFrancaise,
-  .LeDeliceDesSens {
+.LaNoteEnchantee,
+.ALaFrancaise,
+.LeDeliceDesSens {
     width: 45%;
     margin: 10px;
   }
@@ -7820,8 +7747,6 @@ h2 {
     align-items: center;
   }
 }
-
-/*media queries : adaptation pour les écrans des tablettes*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #page-accueil-container {
     width: 70%;
@@ -7851,9 +7776,6 @@ h2 {
     align-items: center;
   }
 }
-
-
-/*Un loading-spinner apparaît pendant deux secondes quand on arrive sur la page d'accueil*/
 .container-loading-spinner {
   display: flex;
   justify-content: center;
@@ -7865,7 +7787,7 @@ h2 {
   height: 100vh;
   z-index: 2;
   opacity: 1;
-  background-color: #fffffff1;
+  background-color: rgba(255, 255, 255, 0.863);
   animation: loadingSpinner 2s forwards;
 }
 
@@ -7880,9 +7802,9 @@ h2 {
 .spinner {
   width: 100px;
   height: 100px;
-  border: 10px solid #e2e2e2;
-  border-top: 10px solid purple;
-  border-bottom: 10px solid purple;
+  border: 10px solid #9356dc;
+  border-top: 10px solid #ff79da;
+  border-bottom: 10px solid #ff79da;
   border-radius: 50%;
   animation: spinner 2s ease-in-out;
 }
@@ -7895,8 +7817,35 @@ h2 {
     transform: rotate(360deg);
   }
 }
+.coeur i {
+  color: black;
+  font-size: 30px;
+  font-weight: 900;
+}
 
-/*Apparence des liens*/
+.coeur i:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background-clip: text;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  animation: coeur 3s ease forwards;
+}
+
+@keyframes coeur {
+  0% {
+    font-weight: 900;
+    background: -webkit- linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+  }
+  100% {
+    font-weight: 900;
+    background: -webkit- linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -7907,10 +7856,8 @@ a {
   font-weight: 400;
 }
 
-/*Le même footer est présent sur toutes les pages du site. Quand on clique sur "Contact", on est renvoyé vers une adresse mail*/
-
 footer {
-  background-color: #353535;
+  background-color: #3d413f;
 }
 
 .contenu-footer {
@@ -7951,7 +7898,7 @@ li.fas.fa-handshake::before {
 }
 
 li a {
-  color: white;
+  color: #fafafa;
   cursor: pointer;
   text-decoration: none;
   line-height: 1.5;

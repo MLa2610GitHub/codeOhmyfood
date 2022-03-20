@@ -10,7 +10,7 @@
     height: 100vh;
     z-index: 2;
     opacity: 1;
-    background-color: #fffffff1;
+    background-color: $backgroundSpinner;
     animation: loadingSpinner 2s forwards;
   }
 
@@ -26,9 +26,9 @@
   .spinner {
     width: 100px;
     height: 100px;
-    border: 10px solid rgb(226, 226, 226);
-    border-top: 10px solid $colorMauve;
-    border-bottom: 10px solid $colorMauve;
+    border: 10px solid $primary;
+    border-top: 10px solid $secondary;
+    border-bottom: 10px solid $secondary;
     border-radius: 50%;
     animation: spinner 2s ease-in-out;
   }
@@ -92,30 +92,30 @@
 
 @mixin coeur {
   .coeur i {
-    color: black;
-    font-size: 26px;
-    padding-right: 18px;
+    color: $colorBlack;
+    font-size: 30px;
+    font-weight: 900;
   }
 
   .coeur i:hover {
     cursor: pointer;
     font-weight: bold;
     background-clip: text;
-    background-image: linear-gradient(#ff79da, #9356dc);
+    background-image: $colorButton;
     animation: coeur 3s ease forwards;
   }
 
   @keyframes coeur {
     0% {
       font-weight: 900;
-      background: -webkit-linear-gradient(#9356dc, #ff79da);
+      background: -webkit-$colorButton;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.1;
     }
     100% {
       font-weight: 900;
-      background: -webkit-linear-gradient(#9356dc, #ff79da);
+      background: -webkit-$colorButton;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -150,7 +150,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    transition: padding-right 450ms ease-in-out;
+    transition: padding-right 0.45s ease-in-out;
 
     &:hover .texte-prix p {
       width: calc(100% - 33%);
@@ -204,7 +204,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    background-color: #99e2d0;
+    background-color: $tertiary;
     border-radius: 0 15px 15px 0;
     padding: 10px;
     opacity: 0;
@@ -214,10 +214,10 @@
     top: 0;
     transition: transform 330ms ease-in-out;
     & .fa-circle-check {
-      color: #fff;
+      color: $colorWhite;
       font-family: FontAwesome;
       font-size: 30px;
-      transition: transform 500ms ease-in-out;
+      transition: transform 0.5s ease-in-out;
     }
   }
 }
@@ -267,8 +267,8 @@
   }
 
   .button-commander input {
-    background: linear-gradient(#ff7edb, #9356dc);
-    color: white;
+    background: $colorButton;
+    color: $colorWhite;
     width: 200px;
     padding: 15px;
     border-radius: 25px;
@@ -287,7 +287,7 @@
 
 @mixin footer {
   footer {
-    background-color: #353535;
+    background-color: $backgroundFooter;
   }
 
   .contenu-footer {
@@ -330,7 +330,7 @@
   }
 
   li a {
-    color: white;
+    color: $colorWhite;
     cursor: pointer;
     text-decoration: none;
     line-height: 1.5;
@@ -341,7 +341,7 @@
   a {
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: $colorBlack;
     font-size: 1rem;
     font-family: Roboto;
     font-size: 1rem;

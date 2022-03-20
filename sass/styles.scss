@@ -115,7 +115,7 @@ ul.fa-ul li:hover {
 
 .fa-ul a {
   text-decoration: none;
-  color: black;
+  color: $colorBlack;
   cursor: pointer;
 }
 
@@ -128,7 +128,7 @@ span.fa-stack {
 
 i.fas.fa-circle.fa-stack-1x {
   font-size: 1.5em;
-  color: rgb(147, 86, 220);
+  color: $primary;
   padding-left: 0;
   vertical-align: middle;
 }
@@ -171,7 +171,7 @@ h2 {
 .LaNoteEnchantee,
 .ALaFrancaise,
 .LeDeliceDesSens {
-  background-color: white;
+  background-color: $colorWhite;
   margin-bottom: 20px;
   border-radius: 20px;
 }
@@ -209,7 +209,6 @@ h2 {
   color: green;
   top: 10px;
   right: 5px;
-
   margin-right: 7px;
   height: 30px;
   width: 90px;
@@ -232,46 +231,26 @@ h2 {
 }
 
 .data-card-bloc-restaurant h3 {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .data-card-bloc-restaurant p {
-  margin-top: 3px;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .nom-restaurant-et-coeur {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
-.coeur i {
-  color: black;
-  font-size: 26px;
-}
-
-.coeur i:hover {
-  cursor: pointer;
-  font-weight: bold;
-  background-clip: content-text;
-  fill: linear-gradient(#ff79da, #9356dc);
-  animation: coeur 3s ease forwards;
-}
-
-@keyframes coeur {
-  0% {
-    font-weight: 900;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0.1;
-  }
-  100% {
-    font-weight: 900;
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+.coeur {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 19px;
 }
 
 // Adaptation pour les appareils de format différent //
@@ -346,17 +325,14 @@ h2 {
     margin: 0 auto;
   }
 
- 
-
   .page-accueil-bloc-fonctionnement ul li {
     padding: 30px 30px 20px 0;
   }
 
-  ul span{
+  ul span {
     font-size: 1.2em;
   }
 
- 
   .photo-card-restaurant img {
     height: 250px;
     width: 100%;
@@ -374,5 +350,6 @@ h2 {
 }
 
 @include spinner;
+@include coeur;
 @include liens;
 @include footer;
