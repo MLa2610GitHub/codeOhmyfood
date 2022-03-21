@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/font-awesome/regular.css"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAAA;AAKA;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEF;AAAA;EAEE;EACA;;;AACD","file":"regular.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/font-awesome/regular.scss","../../sass/font-awesome/_variables.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAAA;AAQA;EACE;;;AAGF;EACE;EACA;EACA;EACA,cC+BwB;ED9BxB;;AAIF;AAAA;EAEE;EACA","file":"regular.css"}

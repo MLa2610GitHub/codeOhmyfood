@@ -43,6 +43,10 @@ body {
     margin: 0 auto;
   }
 
+  .photo-card-restaurant img {
+    height: 250px;
+  }
+
   .titre-h1 {
     margin: 0;
     padding-left: 30px;
@@ -51,6 +55,7 @@ body {
   .titre-h2 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   .container-desktop-entrees-plats {
@@ -68,15 +73,21 @@ body {
   .container-desktop-desserts {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .liste-desserts {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 3px 0;
+    width: 50%;
   }
 
   .liste-desserts .card-menu {
-    width: 32%;
+    width: 90%;
   }
 
   .button-commander {

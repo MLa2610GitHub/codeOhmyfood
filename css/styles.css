@@ -7686,6 +7686,10 @@ h2 {
   margin-top: 19px;
 }
 
+.logo-ohmyfood-police {
+  padding-left: 20px;
+}
+
 /*media queries*/
 @media screen and (min-width: 992px) {
   body {
