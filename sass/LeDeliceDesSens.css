@@ -486,7 +486,7 @@ template {
   -webkit-animation-name: fa-beat;
           animation-name: fa-beat;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 1s);
@@ -501,7 +501,7 @@ template {
   -webkit-animation-name: fa-bounce;
           animation-name: fa-bounce;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 1s);
@@ -516,7 +516,7 @@ template {
   -webkit-animation-name: fa-fade;
           animation-name: fa-fade;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 1s);
@@ -531,7 +531,7 @@ template {
   -webkit-animation-name: fa-beat-fade;
           animation-name: fa-beat-fade;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 1s);
@@ -546,7 +546,7 @@ template {
   -webkit-animation-name: fa-flip;
           animation-name: fa-flip;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 1s);
@@ -561,7 +561,7 @@ template {
   -webkit-animation-name: fa-shake;
           animation-name: fa-shake;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 1s);
@@ -576,7 +576,7 @@ template {
   -webkit-animation-name: fa-spin;
           animation-name: fa-spin;
   -webkit-animation-delay: var(--fa-animation-delay, 0);
-          animation-delay: var(--fa-animation-delay, 0);
+          
   -webkit-animation-direction: var(--fa-animation-direction, normal);
           animation-direction: var(--fa-animation-direction, normal);
   -webkit-animation-duration: var(--fa-animation-duration, 2s);
@@ -826,9 +826,7 @@ template {
   transform: scale(-1, -1);
 }
 
-.fa-rotate-by {
-  transform: rotate(var(--fa-rotate-angle, none));
-}
+
 
 .fa-stack {
   display: inline-block;
@@ -7572,213 +7570,354 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   min-height: 100vh;
+  width: 100%;
+  font-size: 16px;
 }
-body #page-accueil-container {
-  max-width: 667px;
+body #bloc-page {
+  max-width: 767px;
   margin: 0 auto;
   display: flex;
-}
-
-header {
-  width: 100%;
-  margin-top: 15px;
-}
-header .top-header {
-  display: flex;
-}
-header .top-header .fa-arrow-left {
-  padding: 15px;
-}
-header .top-header .fa-arrow-left .logo-ohmyfood {
-  text-align: center;
-  font-family: Shrikhand;
+  flex-direction: column;
 }
 
 .photo-card-restaurant {
   display: flex;
 }
 
-.photo-card-restaurant img {
-  height: 200px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
+/*media queries*/
+@media screen and (min-width: 992px) {
+  body {
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
 
-main {
-  background-color: #F6F6F6;
-}
+  #bloc-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.header-bloc-menus {
+  .photo-card-restaurant img {
+    height: 250px;
+  }
+
+  .titre-h1 {
+    margin: 0;
+    padding-left: 30px;
+  }
+
+  .titre-h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container-desktop-entrees-plats {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 20px 20px 20px;
+  }
+
+  .liste-entrees,
+.liste-plats {
+    width: 50%;
+  }
+
+  .container-desktop-desserts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .liste-desserts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3px 0;
+    width: 50%;
+  }
+
+  .liste-desserts .card-menu {
+    width: 90%;
+  }
+
+  .button-commander {
+    margin-bottom: 10px;
+  }
+
+  .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #page-accueil-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .coeur {
+    padding-right: 40px;
+  }
+
+  .card-menu {
+    padding: 20px;
+  }
+
+  .button-commander {
+    margin-bottom: 10px;
+  }
+
+  .contenu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container-loading-spinner {
   display: flex;
-}
-
-.card-texte-prix {
-  display: flex;
-}
-
-.prix {
-  display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.863);
+  animation: loadingSpinner 2s forwards;
+}
+
+@keyframes loadingSpinner {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #9356dc;
+  border-top: 10px solid #ff79da;
+  border-bottom: 10px solid #ff79da;
+  border-radius: 50%;
+  animation: spinner 2s ease-in-out;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  width: 100%;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 65px 10px 0;
+}
+
+.logo-ohmyfood {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-ohmyfood img {
+  width: 90%;
+}
+
+.photo-card-restaurant img {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
 }
 
 .nom-restaurant {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-left: 20px;
+  align-items: center;
+  padding: 0 24px;
+  font-family: shrikhand;
+  font-size: 14px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 28px 28px 0 0;
+  margin-top: -22px;
+}
+
+.coeur i {
+  color: black;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.coeur i:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background-clip: text;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  animation: coeur 3s ease forwards;
+}
+
+@keyframes coeur {
+  0% {
+    font-weight: 900;
+    background: -webkit- linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.1;
+  }
+  100% {
+    font-weight: 900;
+    background: -webkit- linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 .titre-h2 {
-  margin-left: 25px;
-  border-bottom: 7px solid #99e2d0;
-  width: 40px;
-  border-radius: 5px;
+  padding-left: 30px;
+  margin: 0 0 0 17px;
+  border-bottom: 4px solid #99e2d0;
+  width: 16px;
+  border-radius: 3px;
 }
 
-.card-entrees {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  border-radius: 20px;
-  padding: 1px 20px 0 20px;
-  margin: 20px;
-  box-shadow: 5px 5px 5px 0 #e2e2e2;
-  width: 95%;
+p {
+  margin: 0 0 0 -27px;
+}
+
+.card-menu {
+  position: relative;
   overflow: hidden;
-}
-
-.card-entrees .texte h3 {
-  font-size: 20px;
-}
-
-.card-plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 89%;
   background-color: white;
-  border-radius: 20px;
-  padding: 1px 20px 0 20px;
-  margin: 20px;
+  line-height: 1.3;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 16px;
   box-shadow: 5px 5px 5px 0 #e2e2e2;
-  width: 95%;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: padding-right 0.45s ease-in-out;
+}
+.card-menu:hover .texte-prix p {
+  width: 67%;
+}
+.card-menu:hover .texte-prix span {
+  transform: translate(-50px);
+}
+.card-menu:hover .toggle {
+  opacity: 1;
+  transform: translate(-50px);
+  cursor: pointer;
+}
+.card-menu:hover .fa-circle-check {
+  transform: rotate(360deg);
 }
 
-.card-plats .texte h3 {
-  font-size: 20px;
-}
-
-.card-desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  border-radius: 20px;
-  padding: 1px 20px 0 20px;
-  margin: 20px;
-  box-shadow: 5px 5px 5px 0 #e2e2e2;
-  width: 95%;
+.card-menu h3 {
+  margin: 0;
+  font-size: 18px;
   overflow: hidden;
-}
-
-.card-desserts .texte h3 {
-  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
 }
 
 .texte-prix {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 24px;
   width: 100%;
-  margin: 25px;
 }
 
-.texte {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-left: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.texte h3 {
+.texte-prix p {
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 22px;
-}
-
-.texte p {
-  margin-top: 8px;
-  margin-bottom: 0;
   width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.prix {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.texte-prix span {
   font-weight: bold;
-  margin: 0 25px 0 5px;
+  margin-right: 5px;
 }
 
-.toggle {
+.card-menu .toggle {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  background: #99E2D0;
-  right: 0;
-  width: 80px;
-  height: 110px;
-  color: #FFF;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  padding: 10px;
+  opacity: 0;
+  width: 40px;
+  height: 61px;
+  right: -50px;
+  top: 0;
+  transition: transform 330ms ease-in-out;
+}
+.card-menu .toggle .fa-circle-check {
+  color: #fafafa;
+  font-family: FontAwesome;
+  font-size: 30px;
+  transition: transform 0.5s ease-in-out;
 }
 
-.liste-entrees .slideDown, .liste-plats .slideDown, .liste-desserts .slideDown {
-  transition: 6s;
-  -webkit-animation: slideDown 4s;
-          animation: slideDown 4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+.liste-entrees,
+.liste-plats,
+.liste-desserts {
+  transition: 3s;
+  animation: slideMenu 3s forwards;
 }
-@-webkit-keyframes slideDown {
+@keyframes slideMenu {
   0% {
-    transform: translateY(0);
     opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(15px);
   }
   100% {
-    transform: translateY-(-200);
     opacity: 1;
-  }
-}
-@keyframes slideDown {
-  0% {
     transform: translateY(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY-(-200);
-    opacity: 1;
   }
 }
 
 .button-commander {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .button-commander input {
-  background: linear-gradient(#ff7edb, #9356dc);
-  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: #fafafa;
   width: 200px;
   padding: 15px;
   border-radius: 25px;
@@ -7790,10 +7929,12 @@ main {
 
 .button-commander input:hover {
   opacity: 0.6;
+  box-shadow: 3px 3px 3px 0px #979797;
+  cursor: pointer;
 }
 
 footer {
-  background-color: #353535;
+  background-color: #3d413f;
 }
 
 .contenu-footer {
@@ -7801,11 +7942,11 @@ footer {
   padding-top: 10px;
   margin-bottom: 2px;
 }
-.contenu-footer .logo-ohmyfood {
+.contenu-footer .logo-ohmyfood-police {
   padding-left: 20px;
   font-family: Shrikhand;
 }
-.contenu-footer .logo-ohmyfood .logo-ohmyfood h3 {
+.contenu-footer .logo-ohmyfood-police .logo-ohmyfood h3 {
   margin-bottom: 0;
 }
 
@@ -7834,7 +7975,7 @@ li.fas.fa-handshake::before {
 }
 
 li a {
-  color: white;
+  color: #fafafa;
   cursor: pointer;
   text-decoration: none;
   line-height: 1.5;
@@ -7848,4 +7989,6 @@ a {
   font-family: Roboto;
   font-size: 1rem;
   font-weight: 400;
-}/*# sourceMappingURL=LeDeliceDesSens.css.map */
+}
+
+/*# sourceMappingURL=LeDeliceDesSens.css.map */
